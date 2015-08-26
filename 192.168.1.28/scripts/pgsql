@@ -1,0 +1,27 @@
+#! /bin/sh
+# /etc/init.d/pgsql
+#
+
+# Some things that run always
+
+# Carry out specific functions when asked to by the system
+
+case "$1" in
+  start)
+    su postgres -c "/usr/local/pgdb/bin/pg_ctl start -D /usr/local/pgdrnt/" &
+    echo "Starting Postgres (5432)"
+    ;;
+  stop)
+    su postgres -c "/usr/local/pgdb/bin/pg_ctl stop -D /usr/local/pgdrnt/" &
+    echo "Stopping Postgres (5432)"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/pgsql {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+
+

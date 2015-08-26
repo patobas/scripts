@@ -1,0 +1,167 @@
+Transfer started at Wed Jun 17 11:04:28 2015
+PID is 12783
+Log file is LOG_imapsync/2015_06_17_11_04_28_prensabuenosaires.txt
+$RCSfile: imapsync,v $ $Revision: 1.607 $ $Date: 2014/11/14 16:25:06 $ 
+Here is a [linux] system (Linux mailserver 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --buffersize 8192000 --nosyncacls --subscribe --syncinternaldates --host1 192.168.1.5 --user1 testing --password1 MASKED --host2 192.168.1.4 --user2 prensabuenosaires --authuser2 root@renatea.gob.ar --password2 MASKED --ssl1 --ssl2
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+Unicode::String      2.09
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use PLAIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [192.168.1.5] port [993] user [testing]
+Host2: IMAP server [192.168.1.4] port [993] user [prensabuenosaires]
+Host1: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION] Courier-IMAP ready. Copyright 1998-2011 Double Precision, Inc.  See COPYING for distribution information.
+Host1: 192.168.1.5 says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [192.168.1.5] with user [testing] auth [LOGIN]
+Host2: * OK IMAP4 ready
+Host2: 192.168.1.4 says it has CAPABILITY for AUTHENTICATE PLAIN
+Host2: success login on [192.168.1.4] with user [prensabuenosaires] auth [PLAIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.Archive]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Trash]
+
+Host2 folders list:
+[Chats]
+[Contacts]
+[Drafts]
+[Emailed Contacts]
+[INBOX]
+[Junk]
+[Sent]
+[Trash]
+
+Folders in host2 not in host1:
+[Emailed Contacts]
+[Contacts]
+[Chats]
+
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:     47209 Messages:     3 Biggest:     45355
+Host1 folder [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:               3 messages
+Host1 Total size:            47209 bytes (46.103 KiB)
+Host1 Biggest message:       45355 bytes (44.292 KiB)
+Host1 Time spent:              0.4 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Archive]                           does not exist yet
+Host2 folder [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder [INBOX]                             Size:      4139 Messages:     1 Biggest:      4139
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:               1 messages
+Host2 Total size:             4139 bytes (4.042 KiB)
+Host2 Biggest message:        4139 bytes (4.042 KiB)
+Host2 Time spent:              0.1 seconds
+++++ Looping on each folder
+[INBOX]                             -> [INBOX]                            
+Subscribing to folder INBOX on destination server
+msg INBOX/1 {927}             copied to INBOX/258        7.20 msgs/s  6.518 KiB/s 0.905 KiB copied  ETA: Wed Jun 17 11:04:31 2015  0 s  2/3 msgs left
+msg INBOX/2 {927}             copied to INBOX/259        13.07 msgs/s  11.835 KiB/s 1.811 KiB copied  ETA: Wed Jun 17 11:04:31 2015  0 s  1/3 msgs left
+msg INBOX/3 {45355}           copied to INBOX/260        13.93 msgs/s  214.109 KiB/s 46.103 KiB copied  ETA: Wed Jun 17 11:04:31 2015  0 s  0/3 msgs left
+[INBOX.Archive]                     -> [Archive]                          
+Creating folder [Archive] on host2
+Created  folder [Archive] on host2
+Subscribing to folder Archive on destination server
+[INBOX.Drafts]                      -> [Drafts]                           
+Subscribing to folder Drafts on destination server
+[INBOX.Junk]                        -> [Junk]                             
+Subscribing to folder Junk on destination server
+[INBOX.Sent]                        -> [Sent]                             
+Subscribing to folder Sent on destination server
+[INBOX.Trash]                       -> [Trash]                            
+Subscribing to folder Trash on destination server
+++++ End looping on each folder
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:     47209 Messages:     3 Biggest:     45355
+Host1 folder [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:               3 messages
+Host1 Total size:            47209 bytes (46.103 KiB)
+Host1 Biggest message:       45355 bytes (44.292 KiB)
+Host1 Time spent:              0.0 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Archive]                           Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder [INBOX]                             Size:     51348 Messages:     4 Biggest:     45355
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:               4 messages
+Host2 Total size:            51348 bytes (50.145 KiB)
+Host2 Biggest message:       45355 bytes (44.292 KiB)
+Host2 Time spent:              0.0 seconds
+++++ Statistics
+Transfer started on               : Wed Jun 17 11:04:28 2015
+Transfer ended on                 : Wed Jun 17 11:04:31 2015
+Transfer time                     : 2.8 sec
+Messages transferred              : 3 
+Messages skipped                  : 0
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 0
+Messages void (noheader) on host1 : 0
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 47209 (46.103 KiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 0 (0.000 KiB)
+Total bytes skipped               : 0 (0.000 KiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 1.1 messages/s
+Average bandwidth rate            : 16.3 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 99.9 MiB
+Biggest message                   : 45355 bytes
+Initial difference host2 - host1  : -2 messages, -43070 bytes (-42.061 KiB)
+Final   difference host2 - host1  : 1 messages, 4139 bytes (4.042 KiB)
+Detected 0 errors
+
+
+Homepage: http://imapsync.lamiral.info/
+Log file is LOG_imapsync/2015_06_17_11_04_28_prensabuenosaires.txt

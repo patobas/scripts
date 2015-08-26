@@ -1,0 +1,13 @@
+#!/bin/bash
+mailto1=root@renatea.gob.ar
+mailto2=desarrollo@renatea.gob.ar
+log=/var/log/c_a_z.log
+
+echo "Este script corre 7.00hs Sabado 192.168.1.18" > $log
+echo "STA carga_afip_zip a las `date +"%R"`" >> $log
+cd /opt/samba_shares/carga_afip/sql/
+gzip *.sql >> $log
+cd /opt/samba_shares/carga_afip/cd/
+gzip *.TXT >> $log
+echo "STO carga_afip_zip a las `date +"%R"`" >> $log
+mutt -s "Intranet - carga_afip_zip" -c $mailto1 -c $mailto2 < $log

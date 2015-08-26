@@ -1,0 +1,355 @@
+Transfer started at Sun Jun 14 18:03:11 2015
+PID is 13141
+Log file is LOG_imapsync/2015_06_14_18_03_11_recaudaciones.txt
+$RCSfile: imapsync,v $ $Revision: 1.607 $ $Date: 2014/11/14 16:25:06 $ 
+Here is a [linux] system (Linux mailserver 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --buffersize 8192000 --nosyncacls --subscribe --syncinternaldates --host1 192.168.1.5 --user1 testing --password1 MASKED --host2 192.168.1.4 --user2 recaudaciones --authuser2 root@renatea.gob.ar --password2 MASKED --ssl1 --ssl2 --ssl2
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+Unicode::String      2.09
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use PLAIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [192.168.1.5] port [993] user [testing]
+Host2: IMAP server [192.168.1.4] port [993] user [recaudaciones]
+Host1: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION] Courier-IMAP ready. Copyright 1998-2011 Double Precision, Inc.  See COPYING for distribution information.
+Host1: 192.168.1.5 says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [192.168.1.5] with user [testing] auth [LOGIN]
+Host2: * OK IMAP4 ready
+Host2: 192.168.1.4 says it has CAPABILITY for AUTHENTICATE PLAIN
+Host2: success login on [192.168.1.4] with user [recaudaciones] auth [PLAIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo]
+[INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas] = [INBOX.1º tanda de Mails - Marzo.- Revisar las respuestas]
+[INBOX.2&ALo- tanda de Mails - Junio] = [INBOX.2º tanda de Mails - Junio]
+[INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas] = [INBOX.2º tanda de Mails - Junio.- Revisar las respuestas]
+[INBOX.Drafts]
+[INBOX.Fallidos]
+[INBOX.Mas Informaci&APM-n] = [INBOX.Mas Información]
+[INBOX.Sent]
+[INBOX.Solitud de Plan]
+[INBOX.Trash]
+[INBOX.eSIDIF]
+
+Host2 folders list:
+[1&ALo- tanda de Mails - Marzo] = [1º tanda de Mails - Marzo]
+[1&ALo- tanda de Mails - Marzo/- Revisar las respuestas] = [1º tanda de Mails - Marzo/- Revisar las respuestas]
+[2&ALo- tanda de Mails - Junio] = [2º tanda de Mails - Junio]
+[2&ALo- tanda de Mails - Junio/- Revisar las respuestas] = [2º tanda de Mails - Junio/- Revisar las respuestas]
+[Chats]
+[Contacts]
+[Drafts]
+[Emailed Contacts]
+[Envio de Mails 2015]
+[Envio de Mails 2015/- Revisar las respuestas]
+[Fallidos]
+[INBOX]
+[Junk]
+[Mas Informaci&APM-n] = [Mas Información]
+[Sent]
+[Solitud de Plan]
+[Trash]
+[eSIDIF]
+
+Folders in host2 not in host1:
+[Junk]
+[Envio de Mails 2015/- Revisar las respuestas]
+[Envio de Mails 2015]
+[Emailed Contacts]
+[Contacts]
+[Chats]
+
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2846826 Messages:     8 Biggest:   2749157
+Host1 folder [INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo] Size:  33057693 Messages:   616 Biggest:   4099713
+Host1 folder [INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas] = [INBOX.1º tanda de Mails - Marzo.- Revisar las respuestas] Size: 653862969 Messages:   406 Biggest:  19855665
+Host1 folder [INBOX.2&ALo- tanda de Mails - Junio] = [INBOX.2º tanda de Mails - Junio] Size:  10793301 Messages:   115 Biggest:   5111568
+Host1 folder [INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas] = [INBOX.2º tanda de Mails - Junio.- Revisar las respuestas] Size:  29418142 Messages:    24 Biggest:   8405164
+Host1 folder [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Fallidos]                    Size:    785656 Messages:    45 Biggest:     47449
+Host1 folder [INBOX.Mas Informaci&APM-n] = [INBOX.Mas Información] Size: 134059801 Messages:  1132 Biggest:   9045954
+Host1 folder [INBOX.Sent]                        Size:   3090305 Messages:   138 Biggest:    823845
+Host1 folder [INBOX.Solitud de Plan]             Size:     11042 Messages:     2 Biggest:      7978
+Host1 folder [INBOX.Trash]                       Size:      9172 Messages:     4 Biggest:      3093
+Host1 folder [INBOX.eSIDIF]                      Size:     25544 Messages:     2 Biggest:     15219
+Host1 Nb messages:            2492 messages
+Host1 Total size:        867960451 bytes (827.752 MiB)
+Host1 Biggest message:    19855665 bytes (18.936 MiB)
+Host1 Time spent:             22.0 seconds
+++++ Calculating sizes on Host2
+Host2 folder [1&ALo- tanda de Mails - Marzo] = [1º tanda de Mails - Marzo] Size:  29957049 Messages:   536 Biggest:   4099713
+Host2 folder [1&ALo- tanda de Mails - Marzo/- Revisar las respuestas] = [1º tanda de Mails - Marzo/- Revisar las respuestas] Size: 639459077 Messages:   379 Biggest:  19855665
+Host2 folder [2&ALo- tanda de Mails - Junio] = [2º tanda de Mails - Junio] Size:  10731020 Messages:   107 Biggest:   5111568
+Host2 folder [2&ALo- tanda de Mails - Junio/- Revisar las respuestas] = [2º tanda de Mails - Junio/- Revisar las respuestas] Size:  28675637 Messages:    23 Biggest:   8405164
+Host2 folder [Drafts]                            Size:     25848 Messages:     1 Biggest:     25848
+Host2 folder [Fallidos]                          Size:    785656 Messages:    45 Biggest:     47449
+Host2 folder [INBOX]                             Size:  38084476 Messages:   118 Biggest:   5475603
+Host2 folder [Mas Informaci&APM-n] = [Mas Información] Size: 133110495 Messages:  1127 Biggest:   9045954
+Host2 folder [Sent]                              Size:   1538832 Messages:   115 Biggest:    128198
+Host2 folder [Solitud de Plan]                   Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Trash]                             Size:  63343465 Messages:   294 Biggest:   7378131
+Host2 folder [eSIDIF]                            Size:     25544 Messages:     2 Biggest:     15219
+Host2 Nb messages:            2747 messages
+Host2 Total size:        945737099 bytes (901.925 MiB)
+Host2 Biggest message:    19855665 bytes (18.936 MiB)
+Host2 Time spent:              2.1 seconds
+++++ Looping on each folder
+[INBOX]                             -> [INBOX]                            
+msg INBOX/1 {10635}           copied to INBOX/4789       0.43 msgs/s  4.447 KiB/s 10.386 KiB copied  ETA: Sun Jun 14 19:40:37 2015  5818 s  2491/2492 msgs left
+msg INBOX/2 {2749157}         copied to INBOX/4791       0.68 msgs/s  917.467 KiB/s 2.632 MiB copied  ETA: Sun Jun 14 19:04:37 2015  3657 s  2490/2492 msgs left
+msg INBOX/3 {8411}            copied to INBOX/4793       1.01 msgs/s  905.854 KiB/s 2.640 MiB copied  ETA: Sun Jun 14 18:44:56 2015  2476 s  2489/2492 msgs left
+[INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo] -> [1&ALo- tanda de Mails - Marzo] = [1º tanda de Mails - Marzo]
+msg INBOX.1&ALo- tanda de Mails - Marzo/1 {1751526}         copied to 1&ALo- tanda de Mails - Marzo/4794       0.61 msgs/s  668.924 KiB/s 4.310 MiB copied  ETA: Sun Jun 14 19:12:00 2015  4096 s  2483/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/2 {12950}           copied to 1&ALo- tanda de Mails - Marzo/4795       0.76 msgs/s  669.138 KiB/s 4.323 MiB copied  ETA: Sun Jun 14 18:58:27 2015  3284 s  2482/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/3 {9016}            copied to 1&ALo- tanda de Mails - Marzo/4796       0.91 msgs/s  669.193 KiB/s 4.331 MiB copied  ETA: Sun Jun 14 18:49:24 2015  2741 s  2481/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/4 {5912}            copied to 1&ALo- tanda de Mails - Marzo/4797       1.05 msgs/s  669.075 KiB/s 4.337 MiB copied  ETA: Sun Jun 14 18:42:55 2015  2352 s  2480/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/5 {10051}           copied to 1&ALo- tanda de Mails - Marzo/4798       1.20 msgs/s  668.976 KiB/s 4.347 MiB copied  ETA: Sun Jun 14 18:38:05 2015  2062 s  2479/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/6 {15678}           copied to 1&ALo- tanda de Mails - Marzo/4799       1.35 msgs/s  669.676 KiB/s 4.361 MiB copied  ETA: Sun Jun 14 18:34:20 2015  1836 s  2478/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/7 {9645}            copied to 1&ALo- tanda de Mails - Marzo/4800       1.50 msgs/s  669.883 KiB/s 4.371 MiB copied  ETA: Sun Jun 14 18:31:19 2015  1655 s  2477/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/8 {13818}           copied to 1&ALo- tanda de Mails - Marzo/4801       1.64 msgs/s  670.302 KiB/s 4.384 MiB copied  ETA: Sun Jun 14 18:28:51 2015  1507 s  2476/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/9 {13026}           copied to 1&ALo- tanda de Mails - Marzo/4802       1.79 msgs/s  670.458 KiB/s 4.396 MiB copied  ETA: Sun Jun 14 18:26:49 2015  1385 s  2475/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/10 {12776}          copied to 1&ALo- tanda de Mails - Marzo/4803       1.93 msgs/s  670.831 KiB/s 4.408 MiB copied  ETA: Sun Jun 14 18:25:04 2015  1281 s  2474/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/11 {13232}          copied to 1&ALo- tanda de Mails - Marzo/4804       2.07 msgs/s  670.909 KiB/s 4.421 MiB copied  ETA: Sun Jun 14 18:23:36 2015  1192 s  2473/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/12 {8542}           copied to 1&ALo- tanda de Mails - Marzo/4805       2.22 msgs/s  670.168 KiB/s 4.429 MiB copied  ETA: Sun Jun 14 18:22:19 2015  1115 s  2472/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/13 {21681}          copied to 1&ALo- tanda de Mails - Marzo/4806       2.35 msgs/s  667.985 KiB/s 4.450 MiB copied  ETA: Sun Jun 14 18:21:17 2015  1054 s  2471/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/14 {7599}           copied to 1&ALo- tanda de Mails - Marzo/4807       2.49 msgs/s  667.810 KiB/s 4.457 MiB copied  ETA: Sun Jun 14 18:20:17 2015  993 s  2470/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/15 {4219}           copied to 1&ALo- tanda de Mails - Marzo/4808       2.63 msgs/s  667.244 KiB/s 4.461 MiB copied  ETA: Sun Jun 14 18:19:23 2015  939 s  2469/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/16 {7691}           copied to 1&ALo- tanda de Mails - Marzo/4809       2.77 msgs/s  667.171 KiB/s 4.469 MiB copied  ETA: Sun Jun 14 18:18:35 2015  891 s  2468/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/17 {7493}           copied to 1&ALo- tanda de Mails - Marzo/4810       2.91 msgs/s  667.156 KiB/s 4.476 MiB copied  ETA: Sun Jun 14 18:17:51 2015  847 s  2467/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/18 {9067}           copied to 1&ALo- tanda de Mails - Marzo/4811       3.05 msgs/s  665.843 KiB/s 4.484 MiB copied  ETA: Sun Jun 14 18:17:14 2015  810 s  2466/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/19 {9309}           copied to 1&ALo- tanda de Mails - Marzo/4812       3.18 msgs/s  665.663 KiB/s 4.493 MiB copied  ETA: Sun Jun 14 18:16:38 2015  774 s  2465/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/20 {8522}           copied to 1&ALo- tanda de Mails - Marzo/4813       3.32 msgs/s  665.035 KiB/s 4.501 MiB copied  ETA: Sun Jun 14 18:16:06 2015  743 s  2464/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/21 {12441}          copied to 1&ALo- tanda de Mails - Marzo/4814       3.46 msgs/s  665.303 KiB/s 4.513 MiB copied  ETA: Sun Jun 14 18:15:37 2015  713 s  2463/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/22 {8153}           copied to 1&ALo- tanda de Mails - Marzo/4815       3.59 msgs/s  665.217 KiB/s 4.521 MiB copied  ETA: Sun Jun 14 18:15:09 2015  685 s  2462/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/23 {8730}           copied to 1&ALo- tanda de Mails - Marzo/4816       3.73 msgs/s  665.053 KiB/s 4.529 MiB copied  ETA: Sun Jun 14 18:14:44 2015  660 s  2461/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/24 {9603}           copied to 1&ALo- tanda de Mails - Marzo/4817       3.86 msgs/s  663.595 KiB/s 4.538 MiB copied  ETA: Sun Jun 14 18:14:22 2015  638 s  2460/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/25 {11719}          copied to 1&ALo- tanda de Mails - Marzo/4818       3.99 msgs/s  663.793 KiB/s 4.550 MiB copied  ETA: Sun Jun 14 18:14:00 2015  616 s  2459/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/26 {33378}          copied to 1&ALo- tanda de Mails - Marzo/4819       4.05 msgs/s  655.922 KiB/s 4.581 MiB copied  ETA: Sun Jun 14 18:13:50 2015  606 s  2458/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/28 {19025}          copied to 1&ALo- tanda de Mails - Marzo/4820       4.16 msgs/s  653.309 KiB/s 4.600 MiB copied  ETA: Sun Jun 14 18:13:34 2015  590 s  2456/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/29 {9802}           copied to 1&ALo- tanda de Mails - Marzo/4821       4.29 msgs/s  652.472 KiB/s 4.609 MiB copied  ETA: Sun Jun 14 18:13:17 2015  573 s  2455/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/30 {8691}           copied to 1&ALo- tanda de Mails - Marzo/4822       4.39 msgs/s  648.803 KiB/s 4.617 MiB copied  ETA: Sun Jun 14 18:13:03 2015  559 s  2454/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/31 {9145}           copied to 1&ALo- tanda de Mails - Marzo/4823       4.52 msgs/s  648.836 KiB/s 4.626 MiB copied  ETA: Sun Jun 14 18:12:47 2015  543 s  2453/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/32 {8524}           copied to 1&ALo- tanda de Mails - Marzo/4824       4.65 msgs/s  648.587 KiB/s 4.634 MiB copied  ETA: Sun Jun 14 18:12:32 2015  528 s  2452/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/33 {12173}          copied to 1&ALo- tanda de Mails - Marzo/4825       4.78 msgs/s  649.042 KiB/s 4.646 MiB copied  ETA: Sun Jun 14 18:12:18 2015  513 s  2451/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/34 {8304}           copied to 1&ALo- tanda de Mails - Marzo/4826       4.88 msgs/s  645.301 KiB/s 4.654 MiB copied  ETA: Sun Jun 14 18:12:07 2015  503 s  2450/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/35 {2074}           copied to 1&ALo- tanda de Mails - Marzo/4827       5.00 msgs/s  644.579 KiB/s 4.656 MiB copied  ETA: Sun Jun 14 18:11:54 2015  490 s  2449/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/37 {13617}          copied to 1&ALo- tanda de Mails - Marzo/4828       5.13 msgs/s  645.050 KiB/s 4.669 MiB copied  ETA: Sun Jun 14 18:11:42 2015  477 s  2447/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/38 {17945}          copied to 1&ALo- tanda de Mails - Marzo/4829       5.21 msgs/s  641.126 KiB/s 4.686 MiB copied  ETA: Sun Jun 14 18:11:34 2015  469 s  2446/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/39 {11972}          copied to 1&ALo- tanda de Mails - Marzo/4830       5.33 msgs/s  641.503 KiB/s 4.697 MiB copied  ETA: Sun Jun 14 18:11:23 2015  458 s  2445/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/40 {7961}           copied to 1&ALo- tanda de Mails - Marzo/4831       5.46 msgs/s  641.409 KiB/s 4.705 MiB copied  ETA: Sun Jun 14 18:11:12 2015  448 s  2444/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/41 {116570}         copied to 1&ALo- tanda de Mails - Marzo/4832       5.51 msgs/s  646.671 KiB/s 4.816 MiB copied  ETA: Sun Jun 14 18:11:08 2015  444 s  2443/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/42 {18979}          copied to 1&ALo- tanda de Mails - Marzo/4833       5.60 msgs/s  644.211 KiB/s 4.834 MiB copied  ETA: Sun Jun 14 18:11:01 2015  436 s  2442/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/43 {8863}           copied to 1&ALo- tanda de Mails - Marzo/4834       5.67 msgs/s  638.838 KiB/s 4.842 MiB copied  ETA: Sun Jun 14 18:10:55 2015  431 s  2441/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/44 {8452}           copied to 1&ALo- tanda de Mails - Marzo/4835       5.79 msgs/s  638.787 KiB/s 4.850 MiB copied  ETA: Sun Jun 14 18:10:46 2015  422 s  2440/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/45 {7859}           copied to 1&ALo- tanda de Mails - Marzo/4836       5.91 msgs/s  638.742 KiB/s 4.858 MiB copied  ETA: Sun Jun 14 18:10:38 2015  413 s  2439/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/46 {4480}           copied to 1&ALo- tanda de Mails - Marzo/4837       6.03 msgs/s  638.282 KiB/s 4.862 MiB copied  ETA: Sun Jun 14 18:10:29 2015  405 s  2438/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/47 {8549}           copied to 1&ALo- tanda de Mails - Marzo/4838       6.14 msgs/s  638.295 KiB/s 4.870 MiB copied  ETA: Sun Jun 14 18:10:22 2015  397 s  2437/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/48 {8858}           copied to 1&ALo- tanda de Mails - Marzo/4839       6.26 msgs/s  638.256 KiB/s 4.879 MiB copied  ETA: Sun Jun 14 18:10:14 2015  389 s  2436/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/49 {14530}          copied to 1&ALo- tanda de Mails - Marzo/4840       6.38 msgs/s  638.840 KiB/s 4.893 MiB copied  ETA: Sun Jun 14 18:10:07 2015  382 s  2435/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/50 {9974}           copied to 1&ALo- tanda de Mails - Marzo/4841       6.49 msgs/s  639.007 KiB/s 4.902 MiB copied  ETA: Sun Jun 14 18:10:00 2015  375 s  2434/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/51 {10157}          copied to 1&ALo- tanda de Mails - Marzo/4842       6.61 msgs/s  639.118 KiB/s 4.912 MiB copied  ETA: Sun Jun 14 18:09:53 2015  368 s  2433/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/53 {8315}           copied to 1&ALo- tanda de Mails - Marzo/4843       6.72 msgs/s  638.838 KiB/s 4.920 MiB copied  ETA: Sun Jun 14 18:09:47 2015  362 s  2431/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/54 {11210}          copied to 1&ALo- tanda de Mails - Marzo/4844       6.83 msgs/s  638.268 KiB/s 4.931 MiB copied  ETA: Sun Jun 14 18:09:41 2015  356 s  2430/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/55 {9873}           copied to 1&ALo- tanda de Mails - Marzo/4845       6.94 msgs/s  638.483 KiB/s 4.940 MiB copied  ETA: Sun Jun 14 18:09:35 2015  350 s  2429/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/56 {9557}           copied to 1&ALo- tanda de Mails - Marzo/4846       7.06 msgs/s  638.594 KiB/s 4.949 MiB copied  ETA: Sun Jun 14 18:09:29 2015  344 s  2428/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/58 {9100}           copied to 1&ALo- tanda de Mails - Marzo/4847       7.17 msgs/s  638.610 KiB/s 4.958 MiB copied  ETA: Sun Jun 14 18:09:23 2015  338 s  2426/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/59 {12459}          copied to 1&ALo- tanda de Mails - Marzo/4848       7.28 msgs/s  639.083 KiB/s 4.970 MiB copied  ETA: Sun Jun 14 18:09:18 2015  333 s  2425/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/60 {14427}          copied to 1&ALo- tanda de Mails - Marzo/4849       7.40 msgs/s  639.768 KiB/s 4.983 MiB copied  ETA: Sun Jun 14 18:09:13 2015  328 s  2424/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/61 {9573}           copied to 1&ALo- tanda de Mails - Marzo/4850       7.51 msgs/s  639.958 KiB/s 4.992 MiB copied  ETA: Sun Jun 14 18:09:08 2015  323 s  2423/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/62 {9731}           copied to 1&ALo- tanda de Mails - Marzo/4851       7.62 msgs/s  640.161 KiB/s 5.002 MiB copied  ETA: Sun Jun 14 18:09:03 2015  318 s  2422/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/65 {9407}           copied to 1&ALo- tanda de Mails - Marzo/4852       7.71 msgs/s  637.908 KiB/s 5.011 MiB copied  ETA: Sun Jun 14 18:08:59 2015  314 s  2419/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/66 {8361}           copied to 1&ALo- tanda de Mails - Marzo/4853       7.78 msgs/s  634.682 KiB/s 5.019 MiB copied  ETA: Sun Jun 14 18:08:56 2015  311 s  2418/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/69 {10455}          copied to 1&ALo- tanda de Mails - Marzo/4854       7.83 msgs/s  630.211 KiB/s 5.029 MiB copied  ETA: Sun Jun 14 18:08:54 2015  308 s  2415/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/70 {8097}           copied to 1&ALo- tanda de Mails - Marzo/4855       7.93 msgs/s  628.959 KiB/s 5.036 MiB copied  ETA: Sun Jun 14 18:08:50 2015  305 s  2414/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/71 {12839}          copied to 1&ALo- tanda de Mails - Marzo/4856       8.03 msgs/s  629.346 KiB/s 5.049 MiB copied  ETA: Sun Jun 14 18:08:46 2015  300 s  2413/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/72 {8678}           copied to 1&ALo- tanda de Mails - Marzo/4857       8.10 msgs/s  626.311 KiB/s 5.057 MiB copied  ETA: Sun Jun 14 18:08:43 2015  298 s  2412/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/73 {11848}          copied to 1&ALo- tanda de Mails - Marzo/4858       8.20 msgs/s  626.144 KiB/s 5.068 MiB copied  ETA: Sun Jun 14 18:08:39 2015  294 s  2411/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/78 {17946}          copied to 1&ALo- tanda de Mails - Marzo/4859       8.27 msgs/s  624.100 KiB/s 5.085 MiB copied  ETA: Sun Jun 14 18:08:36 2015  291 s  2406/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/81 {11067}          copied to 1&ALo- tanda de Mails - Marzo/4860       8.38 msgs/s  624.381 KiB/s 5.096 MiB copied  ETA: Sun Jun 14 18:08:32 2015  287 s  2403/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/84 {17596}          copied to 1&ALo- tanda de Mails - Marzo/4861       8.44 msgs/s  622.145 KiB/s 5.113 MiB copied  ETA: Sun Jun 14 18:08:30 2015  284 s  2400/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/85 {11229}          copied to 1&ALo- tanda de Mails - Marzo/4862       8.54 msgs/s  621.991 KiB/s 5.123 MiB copied  ETA: Sun Jun 14 18:08:27 2015  281 s  2399/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/86 {9048}           copied to 1&ALo- tanda de Mails - Marzo/4863       8.64 msgs/s  622.021 KiB/s 5.132 MiB copied  ETA: Sun Jun 14 18:08:23 2015  278 s  2398/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/88 {10314}          copied to 1&ALo- tanda de Mails - Marzo/4864       8.74 msgs/s  622.158 KiB/s 5.142 MiB copied  ETA: Sun Jun 14 18:08:20 2015  274 s  2396/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/90 {16538}          copied to 1&ALo- tanda de Mails - Marzo/4865       8.80 msgs/s  619.935 KiB/s 5.158 MiB copied  ETA: Sun Jun 14 18:08:17 2015  272 s  2394/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/91 {7825}           copied to 1&ALo- tanda de Mails - Marzo/4866       8.91 msgs/s  619.896 KiB/s 5.165 MiB copied  ETA: Sun Jun 14 18:08:14 2015  269 s  2393/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/92 {11592}          copied to 1&ALo- tanda de Mails - Marzo/4867       9.01 msgs/s  620.229 KiB/s 5.176 MiB copied  ETA: Sun Jun 14 18:08:11 2015  265 s  2392/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/153 {7896}          copied to 1&ALo- tanda de Mails - Marzo/4868       9.11 msgs/s  620.103 KiB/s 5.184 MiB copied  ETA: Sun Jun 14 18:08:01 2015  256 s  2331/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/286 {5363}          copied to 1&ALo- tanda de Mails - Marzo/4869       9.21 msgs/s  619.430 KiB/s 5.189 MiB copied  ETA: Sun Jun 14 18:07:44 2015  239 s  2198/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/325 {13346}         copied to 1&ALo- tanda de Mails - Marzo/4870       9.31 msgs/s  619.804 KiB/s 5.202 MiB copied  ETA: Sun Jun 14 18:07:38 2015  232 s  2159/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/612 {407883}        copied to 1&ALo- tanda de Mails - Marzo/4871       9.26 msgs/s  654.557 KiB/s 5.590 MiB copied  ETA: Sun Jun 14 18:07:08 2015  202 s  1872/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/615 {2738}          copied to 1&ALo- tanda de Mails - Marzo/4872       9.36 msgs/s  654.040 KiB/s 5.593 MiB copied  ETA: Sun Jun 14 18:07:05 2015  200 s  1869/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo/616 {4052}          copied to 1&ALo- tanda de Mails - Marzo/4873       9.47 msgs/s  653.695 KiB/s 5.597 MiB copied  ETA: Sun Jun 14 18:07:03 2015  197 s  1868/2492 msgs left
+[INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas] = [INBOX.1º tanda de Mails - Marzo.- Revisar las respuestas] -> [1&ALo- tanda de Mails - Marzo/- Revisar las respuestas] = [1º tanda de Mails - Marzo/- Revisar las respuestas]
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/3 {6442}            copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4874       3.10 msgs/s  211.928 KiB/s 5.603 MiB copied  ETA: Sun Jun 14 18:14:05 2015  601 s  1865/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/5 {11340}           copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4875       3.14 msgs/s  212.179 KiB/s 5.614 MiB copied  ETA: Sun Jun 14 18:13:58 2015  594 s  1863/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/8 {9350}            copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4876       3.17 msgs/s  212.010 KiB/s 5.623 MiB copied  ETA: Sun Jun 14 18:13:52 2015  587 s  1860/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/11 {888549}         copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4877       3.18 msgs/s  242.544 KiB/s 6.470 MiB copied  ETA: Sun Jun 14 18:13:47 2015  583 s  1857/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/12 {15221}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4878       3.22 msgs/s  242.941 KiB/s 6.485 MiB copied  ETA: Sun Jun 14 18:13:41 2015  576 s  1856/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/13 {5005}           copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4879       3.25 msgs/s  243.005 KiB/s 6.490 MiB copied  ETA: Sun Jun 14 18:13:34 2015  570 s  1855/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/15 {10356}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4880       3.29 msgs/s  243.248 KiB/s 6.499 MiB copied  ETA: Sun Jun 14 18:13:28 2015  563 s  1853/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/18 {11154}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4881       3.32 msgs/s  243.528 KiB/s 6.510 MiB copied  ETA: Sun Jun 14 18:13:21 2015  556 s  1850/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/19 {8858}           copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4882       3.36 msgs/s  243.731 KiB/s 6.518 MiB copied  ETA: Sun Jun 14 18:13:15 2015  550 s  1849/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/20 {8337}           copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4883       3.39 msgs/s  243.898 KiB/s 6.526 MiB copied  ETA: Sun Jun 14 18:13:09 2015  544 s  1848/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/24 {9949}           copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4884       3.43 msgs/s  244.118 KiB/s 6.536 MiB copied  ETA: Sun Jun 14 18:13:02 2015  538 s  1844/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/25 {16131}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4885       3.46 msgs/s  244.559 KiB/s 6.551 MiB copied  ETA: Sun Jun 14 18:12:57 2015  532 s  1843/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/27 {13457}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4886       3.50 msgs/s  244.870 KiB/s 6.564 MiB copied  ETA: Sun Jun 14 18:12:51 2015  526 s  1841/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/29 {5677241}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4887       3.41 msgs/s  431.803 KiB/s 11.978 MiB copied  ETA: Sun Jun 14 18:13:04 2015  539 s  1839/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/30 {35080}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4888       3.44 msgs/s  431.458 KiB/s 12.012 MiB copied  ETA: Sun Jun 14 18:13:00 2015  535 s  1838/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/33 {11833}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4889       3.47 msgs/s  431.611 KiB/s 12.023 MiB copied  ETA: Sun Jun 14 18:12:54 2015  529 s  1835/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/38 {3927878}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4890       3.41 msgs/s  550.914 KiB/s 15.769 MiB copied  ETA: Sun Jun 14 18:13:03 2015  536 s  1830/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/53 {12639}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4891       3.44 msgs/s  550.905 KiB/s 15.781 MiB copied  ETA: Sun Jun 14 18:12:54 2015  527 s  1815/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/151 {346433}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4892       3.46 msgs/s  559.885 KiB/s 16.111 MiB copied  ETA: Sun Jun 14 18:12:23 2015  496 s  1717/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/152 {1470778}       copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4893       3.45 msgs/s  600.438 KiB/s 17.514 MiB copied  ETA: Sun Jun 14 18:12:25 2015  498 s  1716/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/160 {9517}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4894       3.48 msgs/s  600.414 KiB/s 17.523 MiB copied  ETA: Sun Jun 14 18:12:18 2015  491 s  1708/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/345 {222575}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4895       3.50 msgs/s  605.559 KiB/s 17.735 MiB copied  ETA: Sun Jun 14 18:11:22 2015  435 s  1523/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/352 {10816}         copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4896       3.53 msgs/s  605.584 KiB/s 17.746 MiB copied  ETA: Sun Jun 14 18:11:16 2015  429 s  1516/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/353 {9337}          copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4897       3.56 msgs/s  605.598 KiB/s 17.755 MiB copied  ETA: Sun Jun 14 18:11:12 2015  425 s  1515/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/363 {449302}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4898       3.58 msgs/s  617.200 KiB/s 18.183 MiB copied  ETA: Sun Jun 14 18:11:08 2015  420 s  1505/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/396 {132790}        copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4899       3.60 msgs/s  619.715 KiB/s 18.310 MiB copied  ETA: Sun Jun 14 18:10:56 2015  409 s  1472/2492 msgs left
+msg INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas/404 {1073524}       copied to 1&ALo- tanda de Mails - Marzo/- Revisar las respuestas/4900       3.60 msgs/s  648.131 KiB/s 19.334 MiB copied  ETA: Sun Jun 14 18:10:54 2015  407 s  1464/2492 msgs left
+[INBOX.2&ALo- tanda de Mails - Junio] = [INBOX.2º tanda de Mails - Junio] -> [2&ALo- tanda de Mails - Junio] = [2º tanda de Mails - Junio]
+msg INBOX.2&ALo- tanda de Mails - Junio/5 {10545}           copied to 2&ALo- tanda de Mails - Junio/4901       3.49 msgs/s  623.655 KiB/s 19.344 MiB copied  ETA: Sun Jun 14 18:11:06 2015  417 s  1457/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/13 {11311}          copied to 2&ALo- tanda de Mails - Junio/4902       3.52 msgs/s  623.701 KiB/s 19.354 MiB copied  ETA: Sun Jun 14 18:11:00 2015  411 s  1449/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/15 {13185}          copied to 2&ALo- tanda de Mails - Junio/4903       3.55 msgs/s  623.094 KiB/s 19.367 MiB copied  ETA: Sun Jun 14 18:10:56 2015  408 s  1447/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/19 {5348}           copied to 2&ALo- tanda de Mails - Junio/4904       3.58 msgs/s  622.217 KiB/s 19.372 MiB copied  ETA: Sun Jun 14 18:10:52 2015  404 s  1443/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/22 {4142}           copied to 2&ALo- tanda de Mails - Junio/4905       3.61 msgs/s  622.143 KiB/s 19.376 MiB copied  ETA: Sun Jun 14 18:10:48 2015  399 s  1440/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/25 {8029}           copied to 2&ALo- tanda de Mails - Junio/4906       3.63 msgs/s  621.415 KiB/s 19.384 MiB copied  ETA: Sun Jun 14 18:10:45 2015  396 s  1437/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/29 {3305}           copied to 2&ALo- tanda de Mails - Junio/4907       3.66 msgs/s  621.308 KiB/s 19.387 MiB copied  ETA: Sun Jun 14 18:10:40 2015  391 s  1433/2492 msgs left
+msg INBOX.2&ALo- tanda de Mails - Junio/39 {6416}           copied to 2&ALo- tanda de Mails - Junio/4908       3.69 msgs/s  621.286 KiB/s 19.393 MiB copied  ETA: Sun Jun 14 18:10:34 2015  385 s  1423/2492 msgs left
+[INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas] = [INBOX.2º tanda de Mails - Junio.- Revisar las respuestas] -> [2&ALo- tanda de Mails - Junio/- Revisar las respuestas] = [2º tanda de Mails - Junio/- Revisar las respuestas]
+msg INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas/1 {742505}          copied to 2&ALo- tanda de Mails - Junio/- Revisar las respuestas/4909       3.61 msgs/s  624.988 KiB/s 20.101 MiB copied  ETA: Sun Jun 14 18:10:22 2015  373 s  1346/2492 msgs left
+[INBOX.Drafts]                      -> [Drafts]                           
+[INBOX.Fallidos]                    -> [Fallidos]                         
+[INBOX.Mas Informaci&APM-n] = [INBOX.Mas Información] -> [Mas Informaci&APM-n] = [Mas Información]
+msg INBOX.Mas Informaci&APM-n/1172 {6571}         copied to Mas Informaci&APM-n/4910       2.83 msgs/s  485.143 KiB/s 20.107 MiB copied  ETA: Sun Jun 14 18:05:13 2015  53 s  151/2492 msgs left
+msg INBOX.Mas Informaci&APM-n/1173 {4749}         copied to Mas Informaci&APM-n/4911       2.85 msgs/s  484.678 KiB/s 20.112 MiB copied  ETA: Sun Jun 14 18:05:12 2015  53 s  150/2492 msgs left
+msg INBOX.Mas Informaci&APM-n/1175 {6353}         copied to Mas Informaci&APM-n/4912       2.87 msgs/s  484.675 KiB/s 20.118 MiB copied  ETA: Sun Jun 14 18:05:11 2015  52 s  148/2492 msgs left
+msg INBOX.Mas Informaci&APM-n/1176 {914793}       copied to Mas Informaci&APM-n/4913       2.88 msgs/s  502.972 KiB/s 20.990 MiB copied  ETA: Sun Jun 14 18:05:11 2015  51 s  147/2492 msgs left
+msg INBOX.Mas Informaci&APM-n/1177 {16840}        copied to Mas Informaci&APM-n/4914       2.90 msgs/s  502.744 KiB/s 21.006 MiB copied  ETA: Sun Jun 14 18:05:10 2015  50 s  146/2492 msgs left
+[INBOX.Sent]                        -> [Sent]                             
+msg INBOX.Sent/1 {121274}          copied to Sent/4915       2.84 msgs/s  491.224 KiB/s 21.122 MiB copied  ETA: Sun Jun 14 18:05:12 2015  51 s  145/2492 msgs left
+msg INBOX.Sent/2 {4607}            copied to Sent/4916       2.86 msgs/s  491.203 KiB/s 21.126 MiB copied  ETA: Sun Jun 14 18:05:11 2015  50 s  144/2492 msgs left
+msg INBOX.Sent/3 {1152}            copied to Sent/4917       2.88 msgs/s  491.134 KiB/s 21.128 MiB copied  ETA: Sun Jun 14 18:05:11 2015  50 s  143/2492 msgs left
+msg INBOX.Sent/4 {391134}          copied to Sent/4918       2.90 msgs/s  498.514 KiB/s 21.501 MiB copied  ETA: Sun Jun 14 18:05:10 2015  49 s  142/2492 msgs left
+msg INBOX.Sent/5 {823845}          copied to Sent/4919       2.91 msgs/s  514.167 KiB/s 22.286 MiB copied  ETA: Sun Jun 14 18:05:10 2015  49 s  141/2492 msgs left
+msg INBOX.Sent/6 {5237}            copied to Sent/4920       2.93 msgs/s  514.137 KiB/s 22.291 MiB copied  ETA: Sun Jun 14 18:05:09 2015  48 s  140/2492 msgs left
+msg INBOX.Sent/7 {5218}            copied to Sent/4921       2.95 msgs/s  514.124 KiB/s 22.296 MiB copied  ETA: Sun Jun 14 18:05:09 2015  47 s  139/2492 msgs left
+msg INBOX.Sent/8 {31880}           copied to Sent/4922       2.97 msgs/s  514.150 KiB/s 22.327 MiB copied  ETA: Sun Jun 14 18:05:08 2015  46 s  138/2492 msgs left
+msg INBOX.Sent/9 {5719}            copied to Sent/4923       2.99 msgs/s  514.124 KiB/s 22.332 MiB copied  ETA: Sun Jun 14 18:05:07 2015  46 s  137/2492 msgs left
+msg INBOX.Sent/10 {7313}           copied to Sent/4924       3.01 msgs/s  514.152 KiB/s 22.339 MiB copied  ETA: Sun Jun 14 18:05:07 2015  45 s  136/2492 msgs left
+msg INBOX.Sent/11 {4052}           copied to Sent/4925       3.03 msgs/s  513.784 KiB/s 22.343 MiB copied  ETA: Sun Jun 14 18:05:06 2015  45 s  135/2492 msgs left
+msg INBOX.Sent/15 {8730}           copied to Sent/4926       3.05 msgs/s  513.822 KiB/s 22.351 MiB copied  ETA: Sun Jun 14 18:05:05 2015  43 s  132/2492 msgs left
+msg INBOX.Sent/16 {6427}           copied to Sent/4927       3.07 msgs/s  513.823 KiB/s 22.357 MiB copied  ETA: Sun Jun 14 18:05:04 2015  43 s  131/2492 msgs left
+msg INBOX.Sent/17 {7624}           copied to Sent/4928       3.10 msgs/s  513.853 KiB/s 22.365 MiB copied  ETA: Sun Jun 14 18:05:04 2015  42 s  130/2492 msgs left
+msg INBOX.Sent/22 {10559}          copied to Sent/4929       3.12 msgs/s  513.932 KiB/s 22.375 MiB copied  ETA: Sun Jun 14 18:05:02 2015  40 s  125/2492 msgs left
+msg INBOX.Sent/27 {12647}          copied to Sent/4930       3.14 msgs/s  514.054 KiB/s 22.387 MiB copied  ETA: Sun Jun 14 18:05:00 2015  38 s  120/2492 msgs left
+msg INBOX.Sent/28 {2257}           copied to Sent/4931       3.16 msgs/s  513.987 KiB/s 22.389 MiB copied  ETA: Sun Jun 14 18:04:59 2015  38 s  119/2492 msgs left
+msg INBOX.Sent/29 {18691}          copied to Sent/4932       3.18 msgs/s  513.781 KiB/s 22.407 MiB copied  ETA: Sun Jun 14 18:04:59 2015  37 s  118/2492 msgs left
+msg INBOX.Sent/33 {4118}           copied to Sent/4933       3.20 msgs/s  513.720 KiB/s 22.411 MiB copied  ETA: Sun Jun 14 18:04:57 2015  36 s  114/2492 msgs left
+msg INBOX.Sent/38 {3117}           copied to Sent/4934       3.22 msgs/s  513.567 KiB/s 22.414 MiB copied  ETA: Sun Jun 14 18:04:56 2015  34 s  109/2492 msgs left
+msg INBOX.Sent/39 {3283}           copied to Sent/4935       3.24 msgs/s  513.489 KiB/s 22.417 MiB copied  ETA: Sun Jun 14 18:04:55 2015  33 s  108/2492 msgs left
+msg INBOX.Sent/43 {16593}          copied to Sent/4936       3.26 msgs/s  512.974 KiB/s 22.433 MiB copied  ETA: Sun Jun 14 18:04:54 2015  32 s  104/2492 msgs left
+msg INBOX.Sent/44 {55996}          copied to Sent/4937       3.28 msgs/s  513.070 KiB/s 22.486 MiB copied  ETA: Sun Jun 14 18:04:53 2015  31 s  103/2492 msgs left
+[INBOX.Solitud de Plan]             -> [Solitud de Plan]                  
+msg INBOX.Solitud de Plan/1 {3064}            copied to Solitud de Plan/4938       3.29 msgs/s  512.428 KiB/s 22.489 MiB copied  ETA: Sun Jun 14 18:04:24 2015  2 s  7/2492 msgs left
+msg INBOX.Solitud de Plan/2 {7978}            copied to Solitud de Plan/4939       3.31 msgs/s  512.465 KiB/s 22.497 MiB copied  ETA: Sun Jun 14 18:04:24 2015  2 s  6/2492 msgs left
+[INBOX.Trash]                       -> [Trash]                            
+Host2 folder Trash selected: 294 messages,  duplicates: 109
+[INBOX.eSIDIF]                      -> [eSIDIF]                           
+++++ End looping on each folder
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2846826 Messages:     8 Biggest:   2749157
+Host1 folder [INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo] Size:  33057693 Messages:   616 Biggest:   4099713
+Host1 folder [INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas] = [INBOX.1º tanda de Mails - Marzo.- Revisar las respuestas] Size: 653862969 Messages:   406 Biggest:  19855665
+Host1 folder [INBOX.2&ALo- tanda de Mails - Junio] = [INBOX.2º tanda de Mails - Junio] Size:  10793301 Messages:   115 Biggest:   5111568
+Host1 folder [INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas] = [INBOX.2º tanda de Mails - Junio.- Revisar las respuestas] Size:  29418142 Messages:    24 Biggest:   8405164
+Host1 folder [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Fallidos]                    Size:    785656 Messages:    45 Biggest:     47449
+Host1 folder [INBOX.Mas Informaci&APM-n] = [INBOX.Mas Información] Size: 134059801 Messages:  1132 Biggest:   9045954
+Host1 folder [INBOX.Sent]                        Size:   3090305 Messages:   138 Biggest:    823845
+Host1 folder [INBOX.Solitud de Plan]             Size:     11042 Messages:     2 Biggest:      7978
+Host1 folder [INBOX.Trash]                       Size:      9172 Messages:     4 Biggest:      3093
+Host1 folder [INBOX.eSIDIF]                      Size:     25544 Messages:     2 Biggest:     15219
+Host1 Nb messages:            2492 messages
+Host1 Total size:        867960451 bytes (827.752 MiB)
+Host1 Biggest message:    19855665 bytes (18.936 MiB)
+Host1 Time spent:              4.0 seconds
+++++ Calculating sizes on Host2
+Host2 folder [1&ALo- tanda de Mails - Marzo] = [1º tanda de Mails - Marzo] Size:  33057693 Messages:   616 Biggest:   4099713
+Host2 folder [1&ALo- tanda de Mails - Marzo/- Revisar las respuestas] = [1º tanda de Mails - Marzo/- Revisar las respuestas] Size: 653862969 Messages:   406 Biggest:  19855665
+Host2 folder [2&ALo- tanda de Mails - Junio] = [2º tanda de Mails - Junio] Size:  10793301 Messages:   115 Biggest:   5111568
+Host2 folder [2&ALo- tanda de Mails - Junio/- Revisar las respuestas] = [2º tanda de Mails - Junio/- Revisar las respuestas] Size:  29418142 Messages:    24 Biggest:   8405164
+Host2 folder [Drafts]                            Size:     25848 Messages:     1 Biggest:     25848
+Host2 folder [Fallidos]                          Size:    785656 Messages:    45 Biggest:     47449
+Host2 folder [INBOX]                             Size:  40852679 Messages:   121 Biggest:   5475603
+Host2 folder [Mas Informaci&APM-n] = [Mas Información] Size: 134059801 Messages:  1132 Biggest:   9045954
+Host2 folder [Sent]                              Size:   3090305 Messages:   138 Biggest:    823845
+Host2 folder [Solitud de Plan]                   Size:     11042 Messages:     2 Biggest:      7978
+Host2 folder [Trash]                             Size:  63343465 Messages:   294 Biggest:   7378131
+Host2 folder [eSIDIF]                            Size:     25544 Messages:     2 Biggest:     15219
+Host2 Nb messages:            2896 messages
+Host2 Total size:        969326445 bytes (924.422 MiB)
+Host2 Biggest message:    19855665 bytes (18.936 MiB)
+Host2 Time spent:              2.1 seconds
+++++ Statistics
+Transfer started on               : Sun Jun 14 18:03:11 2015
+Transfer ended on                 : Sun Jun 14 18:04:31 2015
+Transfer time                     : 80.3 sec
+Messages transferred              : 149 
+Messages skipped                  : 2343
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 109
+Messages void (noheader) on host1 : 0
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 23589346 (22.497 MiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 19223739 (18.333 MiB)
+Total bytes skipped               : 844371105 (805.255 MiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 1.9 messages/s
+Average bandwidth rate            : 287.0 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 147.1 MiB
+Biggest message                   : 5677241 bytes
+Initial difference host2 - host1  : 255 messages, 77776648 bytes (74.174 MiB)
+Final   difference host2 - host1  : 404 messages, 101365994 bytes (96.670 MiB)
+Detected 0 errors
+
+
+Homepage: http://imapsync.lamiral.info/
+Log file is LOG_imapsync/2015_06_14_18_03_11_recaudaciones.txt

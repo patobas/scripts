@@ -1,0 +1,169 @@
+Transfer started at Sun Jun 14 16:44:38 2015
+PID is 21938
+Log file is LOG_imapsync/2015_06_14_16_44_38_ggibert.txt
+$RCSfile: imapsync,v $ $Revision: 1.607 $ $Date: 2014/11/14 16:25:06 $ 
+Here is a [linux] system (Linux mailserver 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --buffersize 8192000 --nosyncacls --subscribe --syncinternaldates --host1 192.168.1.5 --user1 testing --password1 MASKED --host2 192.168.1.4 --user2 ggibert --authuser2 root@renatea.gob.ar --password2 MASKED --ssl1 --ssl2
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+Unicode::String      2.09
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use PLAIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [192.168.1.5] port [993] user [testing]
+Host2: IMAP server [192.168.1.4] port [993] user [ggibert]
+Host1: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION] Courier-IMAP ready. Copyright 1998-2011 Double Precision, Inc.  See COPYING for distribution information.
+Host1: 192.168.1.5 says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [192.168.1.5] with user [testing] auth [LOGIN]
+Host2: * OK IMAP4 ready
+Host2: 192.168.1.4 says it has CAPABILITY for AUTHENTICATE PLAIN
+Host2: success login on [192.168.1.4] with user [ggibert] auth [PLAIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.Archive]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Trash]
+
+Host2 folders list:
+[Archive]
+[Chats]
+[Contacts]
+[Drafts]
+[Emailed Contacts]
+[INBOX]
+[Junk]
+[Sent]
+[Trash]
+
+Folders in host2 not in host1:
+[Emailed Contacts]
+[Contacts]
+[Chats]
+
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size: 2042407473 Messages:  2558 Biggest:  26032980
+Host1 folder [INBOX.Archive]                     Size:   1180529 Messages:    38 Biggest:    675509
+Host1 folder [INBOX.Drafts]                      Size:  48865122 Messages:    94 Biggest:  22787334
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size: 832229950 Messages:  2313 Biggest:  24981431
+Host1 folder [INBOX.Trash]                      Host1 Folder INBOX.Trash: Could not select: 31 NO Unable to open this mailbox.
+Host1 Nb messages:            5003 messages
+Host1 Total size:       2924683074 bytes (2.724 GiB)
+Host1 Biggest message:    26032980 bytes (24.827 MiB)
+Host1 Time spent:             12.7 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Archive]                           Size:   1180529 Messages:    38 Biggest:    675509
+Host2 folder [Drafts]                            Size:  26077788 Messages:    93 Biggest:   7090031
+Host2 folder [INBOX]                             Size: 1848857527 Messages:  2553 Biggest:  20849782
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size: 784219331 Messages:  2312 Biggest:  20191572
+Host2 folder [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:            4996 messages
+Host2 Total size:       2660335175 bytes (2.478 GiB)
+Host2 Biggest message:    20849782 bytes (19.884 MiB)
+Host2 Time spent:              3.4 seconds
+++++ Looping on each folder
+[INBOX]                             -> [INBOX]                            
+- msg INBOX/1319 {22106396} couldn't append  (Subject:[Fotos San Gregorio]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "15-Oct-2014 12:03:43 -0300" {22106396}': 168 BAD maximum literal size exceeded
+- msg INBOX/1340 {25266079} couldn't append  (Subject:[r negro]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "16-Oct-2014 12:06:44 -0300" {25266079}': 177 BAD maximum literal size exceeded
+- msg INBOX/1356 {23153541} couldn't append  (Subject:[recopilacion actividades]) to folder INBOX: Error sending 'APPEND INBOX (\Answered \Seen) "17-Oct-2014 13:37:54 -0300" {23153541}': 179 BAD maximum literal size exceeded
+- msg INBOX/1888 {25361671} couldn't append  (Subject:[Parte de prensa de actividad Santa Fe Norte 13/12/14]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "17-Dec-2014 11:10:54 -0300" {25361671}': 218 BAD maximum literal size exceeded
+- msg INBOX/1889 {26032980} couldn't append  (Subject:[Parte de prensa de actividad Santa Fe Norte 13/12/14]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "17-Dec-2014 11:13:36 -0300" {26032980}': 219 BAD maximum literal size exceeded
+- msg INBOX/1891 {24722664} couldn't append  (Subject:[Parte de prensa de actividad Santa Fe Norte 15/12/14]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "17-Dec-2014 11:35:52 -0300" {24722664}': 220 BAD maximum literal size exceeded
+- msg INBOX/2498 {23122640} couldn't append  (Subject:[Fwd: propuesta manual docente]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "14-Apr-2015 13:12:16 -0300" {23122640}': 281 BAD maximum literal size exceeded
+- msg INBOX/3001 {23805363} couldn't append  (Subject:[Cursos - RENATEA]) to folder INBOX: Error sending 'APPEND INBOX (\Seen) "09-Jun-2015 15:02:54 -0300" {23805363}': 363 BAD maximum literal size exceeded
+[INBOX.Archive]                     -> [Archive]                          
+[INBOX.Drafts]                      -> [Drafts]                           
+- msg INBOX.Drafts/804 {22787334} couldn't append  (Subject:[Fwd: Certificados Progresar]) to folder Drafts: Error sending 'APPEND Drafts (\Seen) "06-Nov-2014 14:55:58 -0300" {22787334}': 379 BAD maximum literal size exceeded
+[INBOX.Junk]                        -> [Junk]                             
+[INBOX.Sent]                        -> [Sent]                             
+- msg INBOX.Sent/2179 {24981431} couldn't append  (Subject:[Materiales =?UTF-8?Q?calef=C3=B3n=20solar?=]) to folder Sent: Error sending 'APPEND Sent (\Seen) "04-May-2015 16:38:02 -0300" {24981431}': 553 BAD maximum literal size exceeded
+- msg INBOX.Sent/2370 {23042744} couldn't append  (Subject:[Calzado]) to folder Sent: Error sending 'APPEND Sent (\Seen) "02-Jun-2015 12:43:12 -0300" {23042744}': 570 BAD maximum literal size exceeded
+[INBOX.Trash]                       -> [Trash]                            
+Host1 folder INBOX.Trash: Could not select: 68 NO Unable to open this mailbox.
+++++ End looping on each folder
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size: 2042407473 Messages:  2558 Biggest:  26032980
+Host1 folder [INBOX.Archive]                     Size:   1180529 Messages:    38 Biggest:    675509
+Host1 folder [INBOX.Drafts]                      Size:  48865122 Messages:    94 Biggest:  22787334
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size: 832229950 Messages:  2313 Biggest:  24981431
+Host1 folder [INBOX.Trash]                      Host1 Folder INBOX.Trash: Could not select: 86 NO Unable to open this mailbox.
+Host1 Nb messages:            5003 messages
+Host1 Total size:       2924683074 bytes (2.724 GiB)
+Host1 Biggest message:    26032980 bytes (24.827 MiB)
+Host1 Time spent:             12.4 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Archive]                           Size:   1180529 Messages:    38 Biggest:    675509
+Host2 folder [Drafts]                            Size:  26077788 Messages:    93 Biggest:   7090031
+Host2 folder [INBOX]                             Size: 1848857527 Messages:  2553 Biggest:  20849782
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size: 784219331 Messages:  2312 Biggest:  20191572
+Host2 folder [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:            4996 messages
+Host2 Total size:       2660335175 bytes (2.478 GiB)
+Host2 Biggest message:    20849782 bytes (19.884 MiB)
+Host2 Time spent:              3.5 seconds
+++++ Statistics
+Transfer started on               : Sun Jun 14 16:44:38 2015
+Transfer ended on                 : Sun Jun 14 16:46:44 2015
+Transfer time                     : 126.5 sec
+Messages transferred              : 0 
+Messages skipped                  : 4992
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 0
+Messages void (noheader) on host1 : 0
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 0 (0.000 KiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 0 (0.000 KiB)
+Total bytes skipped               : 2660300231 (2.478 GiB)
+Total bytes error                 : 264382843 (252.135 MiB)
+Message rate                      : 0.0 messages/s
+Average bandwidth rate            : 0.0 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 499.4 MiB
+Biggest message                   : 26032980 bytes
+Initial difference host2 - host1  : -7 messages, -264347899 bytes (-252.102 MiB)
+Final   difference host2 - host1  : -7 messages, -264347899 bytes (-252.102 MiB)
+Detected 14 errors
+
+
+Homepage: http://imapsync.lamiral.info/
+Log file is LOG_imapsync/2015_06_14_16_44_38_ggibert.txt

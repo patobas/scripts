@@ -1,0 +1,70 @@
+#!/usr/bin/perl
+
+# dnsblcount
+# version 20061111
+# (c) 2004, 2005, 2006 Jorey Bump
+
+# Description:
+# Counts DNSBL rejections in Postfix log
+
+# Usage:
+# dnsblcount /path/to/maillog
+# dnsblcount /path/to/maillog1 /path/to/maillog2
+# dnsblcount /path/to/maillogs*
+# grep "search string" /path/to/maillog | dnsblcount
+
+# Sample crontab:
+# 30 5 * * *    /usr/local/sbin/dnsblcount /var/log/maillog | mail -s "$HOSTNAME - DNSBL Count" postmaster
+
+# Sample Postfix 1.1 log lines:
+# Mar  6 06:52:03 mail postfix/smtpd[11873]: reject: RCPT from unknown[208.61.231.102]: 554 Service unavailable; [208.61.231.102] blocked using bl.spamcop.net, reason: Blocked - see http://www.spamcop.net/bl.shtml?208.61.231.102; from=<bob@example.net> to=<rob@example.com>
+# Mar 13 05:47:51 mail postfix/smtpd[28269]: reject: RCPT from mail68.example.info[66.63.191.68]: 554 Service unavailable; [66.63.191.68] blocked using sbl.spamhaus.org, reason: http://www.spamhaus.org/SBL/sbl.lasso?query=SBL12057; from=<bob@example.net> to=<rob@example.com>
+
+# Sample Postfix 2.1 log line:
+# Apr 17 13:49:07 mail postfix/smtpd[18143]: NOQUEUE: reject: RCPT from c-7209e055.1111-2-64736c10.cust.bredbandsbolaget.se[85.224.9.114]: 554 Service unavailable; Client host [85.224.9.114] blocked using bl.spamcop.net; Blocked - see http://www.spamcop.net/bl.shtml?85.224.9.114; from=<haqyhakox@example.com> to=<bob@example.net> proto=ESMTP helo=<c-7209e055.1111-2-64736c10.cust.example.com>
+
+# Sample postfix 2.3 log line:
+# Dec 25 05:41:28 mail postfix/smtpd[14586]: NOQUEUE: reject: RCPT from unknown[202.43.175.151]: 554 5.7.1 Service unavailable; Client host [202.43.175.151] blocked using bl.spamcop.net; Blocked - see http://www.spamcop.net/bl.shtml?202.43.175.151; from=<iglkjlpioed@example.com> to=<bob@example.net> proto=SMTP helo=<mail.example.com>
+
+# Begin:
+use strict;
+
+my ( $dnsbl, $dnsbltotal, $ip, $length, $line, $max,
+     %dnsblcount
+);
+
+my $rule = "=";
+my $totstr = "Total DNSBL rejections:";
+$max = length($totstr);
+
+# read line from stdin
+while ($line = <>) {
+  if ($line =~ /(\[.*\]) blocked using ([^\s]*)(,|;) /) {
+    $ip = $1;
+    $dnsbl = $2;
+    $dnsblcount{$dnsbl} += 1;
+    $dnsbltotal += 1;
+  }
+}
+
+foreach $dnsbl (sort keys %dnsblcount) {
+  $length = length($dnsbl);
+  if ( $length > $max ) {
+    $max = $length
+  }
+}
+
+foreach $dnsbl (sort { $dnsblcount{$b} <=> $dnsblcount{$a} } keys(%dnsblcount)) {
+    printf "%-${max}s  %7s\n", $dnsbl, $dnsblcount{$dnsbl};
+}
+
+foreach (1..($max + 10)) {
+  printf "%s", $rule;
+}
+
+print "\n";
+
+printf "%-${max}s  %8s\n", $totstr, $dnsbltotal;
+
+1;
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /var/www/hosts/boletas_tmp/
+for i in *; do tar -cvf - $i | gzip -c > $i.tar.gz | rm -rf $i ; done

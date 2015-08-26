@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mailto=admin@renatea.gob.ar 
+log=/var/log/lynis.log
+
+lynis -c -q 
+mail -s 'Auditoria del Mailserver'  $mailto < /var/log/lynis.log
+

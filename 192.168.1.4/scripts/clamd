@@ -1,0 +1,5 @@
+#/bin/bash
+#Para error de clamd
+mkdir -p /var/run/clamav
+chown -R amavis:amavis /var/run/clamav
+/root/mail.sh 

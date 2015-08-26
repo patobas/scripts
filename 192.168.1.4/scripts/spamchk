@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# -----------------------------------------------------------------
+# File:        spamchk
+#
+# Purpose:     SPAMASSASIN shell-based filter
+#
+# Location:    /usr/local/bin
+#
+# Usage:       Call this script from master.cf (Postfix)
+#
+# Certified:   GENTOO Linux, Spamassassin 3.0, Postfix
+# -----------------------------------------------------------------
+
+# Variables
+SENDMAIL="/usr/sbin/sendmail -i"
+EGREP=/bin/egrep
+
+# Exit codes from <sysexits.h>
+EX_UNAVAILABLE=69
+
+# Number of *'s in X-Spam-level header needed to sideline message:
+# (Eg. Score of 5.5 = "*****" )
+SPAMLIMIT=10
+
+# Clean up when done or when aborting.
+trap "rm -f /var/tempfs/out.$$" 0 1 2 3 15
+
+# Pipe message to spamc
+cat | /usr/bin/spamc -u filter | sed 's/^\.$/../' > /tmp/out.$$
+
+# Are there more than $SPAMLIMIT stars in X-Spam-Level header? :
+if $EGREP -q "^X-Spam-Level: \*{$SPAMLIMIT,}" < /tmp/out.$$
+then
+  # Option 1: Move high scoring messages to sideline dir so
+  # a human can look at them later:
+  # mv out.$$ $SIDELINE_DIR/`date +%Y-%m-%d_%R`-$$
+
+  # Option 2: Divert to an alternate e-mail address:
+  $SENDMAIL xyz@xxxx.xx < /tmp/out.$$
+
+  # Option 3: Delete the message
+  # rm -f /var/tempfs/out.$$
+else
+  $SENDMAIL "$@" < /tmp/out.$$
+fi
+
+# Postfix returns the exit status of the Postfix sendmail command.
+exit $?

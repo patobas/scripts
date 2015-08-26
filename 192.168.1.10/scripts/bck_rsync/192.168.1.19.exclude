@@ -1,0 +1,5 @@
+/proc
+/var/images/
+/var/lib/postgresql/
+/media/storage/
+/sys

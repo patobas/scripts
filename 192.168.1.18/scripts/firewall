@@ -1,0 +1,20 @@
+#!/bin/sh
+
+ipt='/sbin/iptables'
+# limpio reglas 
+echo "FLUSH..."
+/sbin/iptables -F
+/sbin/iptables -t nat -F
+
+echo "NAT..."
+
+echo "1" > /proc/sys/net/ipv4/ip_forward
+/sbin/iptables -P FORWARD ACCEPT
+
+$ipt -A INPUT -p tcp --dport 8100 -j ACCEPT
+$ipt -A INPUT -p udp --dport 8100 -j ACCEPT
+
+#/sbin/iptables -t nat -A PREROUTING -p tcp --dport 81 -j DNAT --to 192.168.1.12:80
+#/sbin/iptables -t nat -A PREROUTING -p udp --dport 81 -j DNAT --to 192.168.1.12:80
+
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE

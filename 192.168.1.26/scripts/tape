@@ -1,0 +1,11 @@
+#!/bin/bash
+# bck db en tape
+#
+
+echo "Empiezo !" >>/tmp/bcklog
+date  >> /tmp/bck.log
+tar -cvf /dev/rmt0.1 /usr/local/pgsql/data /usr/local/pgsql8/data > /tmp/bcklog 2>/tmp/bck.err
+echo "termine!" >>/tmp/bcklog
+date  >>/tmp/bcklog
+tctl -f /dev/rmt0.1 rewind
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+mailto1=root@renatea.gob.ar
+mailto2=desarrollo@renatea.gob.ar
+log=/var/log/clean_tmp.log
+echo "Empiezo a borrar los tmp 08.00 LaV 192.168.1.18" > $log
+#borro todos los tmp así no me satura la partici�n
+#find . -mtime +1 -type f -exec rm -rf {} \;
+rm -rf /tmp/tsod* >> $log
+echo "Se han borrado todos los tmp !" >> $log
+mutt -s "Intranet - clean_tmp" -c $mailto1 -c $mailto2 < $log

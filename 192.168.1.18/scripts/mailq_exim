@@ -1,0 +1,3 @@
+#!/bin/bash
+#Esto borra la cola de mails del exim
+exim -bpru|awk {'print $3'}|xargs exim -Mrm

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/sbin/swapoff -a -v
+/sbin/swapon -a
+

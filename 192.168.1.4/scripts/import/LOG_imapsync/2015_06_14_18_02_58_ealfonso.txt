@@ -1,0 +1,128 @@
+Transfer started at Sun Jun 14 18:02:58 2015
+PID is 12596
+Log file is LOG_imapsync/2015_06_14_18_02_58_ealfonso.txt
+$RCSfile: imapsync,v $ $Revision: 1.607 $ $Date: 2014/11/14 16:25:06 $ 
+Here is a [linux] system (Linux mailserver 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --buffersize 8192000 --nosyncacls --subscribe --syncinternaldates --host1 192.168.1.5 --user1 testing --password1 MASKED --host2 192.168.1.4 --user2 ealfonso --authuser2 root@renatea.gob.ar --password2 MASKED --ssl1 --ssl2
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+Unicode::String      2.09
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use PLAIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [192.168.1.5] port [993] user [testing]
+Host2: IMAP server [192.168.1.4] port [993] user [ealfonso]
+Host1: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION] Courier-IMAP ready. Copyright 1998-2011 Double Precision, Inc.  See COPYING for distribution information.
+Host1: 192.168.1.5 says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [192.168.1.5] with user [testing] auth [LOGIN]
+Host2: * OK IMAP4 ready
+Host2: 192.168.1.4 says it has CAPABILITY for AUTHENTICATE PLAIN
+Host2: success login on [192.168.1.4] with user [ealfonso] auth [PLAIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE AUTH=PLAIN ACL ACL2=UNION
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo]
+[INBOX.1&ALo- tanda de Mails - Marzo.- Revisar las respuestas] = [INBOX.1º tanda de Mails - Marzo.- Revisar las respuestas]
+[INBOX.2&ALo- tanda de Mails - Junio] = [INBOX.2º tanda de Mails - Junio]
+[INBOX.2&ALo- tanda de Mails - Junio.- Revisar las respuestas] = [INBOX.2º tanda de Mails - Junio.- Revisar las respuestas]
+[INBOX.Drafts]
+[INBOX.Fallidos]
+[INBOX.Mas Informaci&APM-n] = [INBOX.Mas Información]
+[INBOX.Sent]
+[INBOX.Solitud de Plan]
+[INBOX.Trash]
+[INBOX.eSIDIF]
+
+Host2 folders list:
+[Bandeja de entrada]
+[Bandeja de entrada/Papelera]
+[Borradores]
+[Chats]
+[Contacts]
+[Drafts]
+[Emailed Contacts]
+[Enviados]
+[INBOX]
+[Junk]
+[Papelera]
+[Pc's]
+[Proxy]
+[Sent]
+[Trash]
+
+Folders in host2 not in host1:
+[Proxy]
+[Pc's]
+[Papelera]
+[Junk]
+[Enviados]
+[Emailed Contacts]
+[Contacts]
+[Chats]
+[Borradores]
+[Bandeja de entrada/Papelera]
+[Bandeja de entrada]
+
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2846826 Messages:     8 Biggest:   2749157
+Host1 folder [INBOX.1&ALo- tanda de Mails - Marzo] = [INBOX.1º tanda de Mails - Marzo]
+Got a SIGINT!
+++++ Statistics
+Transfer started on               : Sun Jun 14 18:02:58 2015
+Transfer ended on                 : Sun Jun 14 18:02:58 2015
+Transfer time                     : 0.5 sec
+Messages transferred              : 0 
+Messages skipped                  : 0
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 0
+Messages void (noheader) on host1 : 0
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 0 (0.000 KiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 0 (0.000 KiB)
+Total bytes skipped               : 0 (0.000 KiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 0.0 messages/s
+Average bandwidth rate            : 0.0 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 97.2 MiB
+Biggest message                   : 0 bytes
+Initial difference host2 - host1  : 0 messages, 0 bytes (0.000 KiB)
+Final   difference host2 - host1  : 0 messages, 0 bytes (0.000 KiB)
+Detected 0 errors
+
+
+Homepage: http://imapsync.lamiral.info/

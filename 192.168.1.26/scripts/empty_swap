@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -e "\nAntes de liberar la swap:"
+free
+swapoff -a ; swapon -a
+echo -e "\nDespues de liberar la swap:"
+free
+echo "Swap Clean DONE¡"
+

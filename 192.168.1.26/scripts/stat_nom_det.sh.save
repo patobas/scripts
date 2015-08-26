@@ -1,0 +1,11 @@
+#!/bin/sh
+mailto1  = root@renatea.gob.ar
+mailto2  = desarrollo@renatea.gob.ar
+log      = /var/log/stat_nom_det.log
+psql_bin = '/usr/bin/psql'
+pgd_bin  = '/usr/bin/pg_dump -i '
+echo "3.00hs DaJ 192.168.1.26" > $log
+echo "STA stat_nom_det.sh a las `date +"%R"`" >> $log
+echo "" >> $log
+#$psql_bin -h 192.168.1.26 -p 5432 -U postgres -f /root/scripts/stat_nom_det_26.sql dbafip >> $log
+$psql_bin -h 192.168.1.24 -p 5432 -U postgres -f /root/scripts/stat_nom_det_24.sql dbafip >> $log

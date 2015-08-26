@@ -1,0 +1,11 @@
+/sys
+/proc/
+/mnt/nas_23/
+/mnt/rsync_nas21
+/var/log
+/var/rnbackups
+/var/mksbackup
+/var/backup
+/var/db/
+/var/lib/postgresql
+/var/lib/munin

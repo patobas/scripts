@@ -1,0 +1,12 @@
+#!/bin/sh
+mailto1=root@renatea.gob.ar
+mailto2=jalvarez@renatea.gob.ar
+log=/var/log/web_boletas.log
+echo "8.30hs LaV 192.168.1.2 `date +"%R"`" > $log
+echo "STA web_boletas a las `date +"%R"`" >> $log
+pg_dump -i -h 192.168.1.5 -U postgres -ct web_boletas postgres > /tmp/web_boletas.dump
+psql -h 192.168.1.2 -U postgres -f /tmp/web_boletas.dump dbafip
+psql -h 192.168.1.2 -U postgres -c "insert into sam_boletas select id,13,NULL,NULL,cuit,periodo,capital,interes,fecha_impresion, (fecha_impresion+'15 day'::interval)::date from web_boletas wb where not exists (select 1 from sam_boletas where idtipo=13 and id=wb.id);" dbafip
+rm -f /tmp/web_boletas
+echo "STO web_boletas a las `date +"%R"`" >> $log
+echo "" | mutt -s "web_boletas" -c $mailto1 -c $mailto2  < $log

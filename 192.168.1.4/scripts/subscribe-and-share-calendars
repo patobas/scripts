@@ -1,0 +1,1886 @@
+<!---->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script type="text/javascript">
+        var optimizely = "";
+        var optimizely_user = "";
+        var optimizely_asset = "";
+        var optimizely_mail = "";
+        var optimizely_assets_left = "";
+        var optimizely_guides_left = "";
+    </script>
+    <script src="//cdn.optimizely.com/js/664902255.js"></script>
+
+                    <link rel="canonical" href="http://www.dzone.com/snippets/subscribe-and-share-calendars">
+    
+    <!-- Start of DART Code -->
+    <script type='text/javascript'>
+        // This is a bad little hack for things that execute reliance on Drupals JS before its been fully loaded
+        var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'themes': {}, 'locale': {} };
+        Drupal.behaviors = Drupal.behaviors || {};
+        (function() {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            window._pa = window._pa || {};
+            var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+            pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/514a05817a82440002000406.js";
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+        })();
+    </script>
+
+    <script type='text/javascript'>
+        googletag.defineSlot('/2916070/zones_bottomblurb_650x122', [650, 122], 'div-gpt-ad-1350569504085-0').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_masthead_728x90_default', [728, 90], 'div-gpt-ad-1350569504085-1').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_sidebar_336x280_default', [300, 250], 'div-gpt-ad-1350569504085-2').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_superboard_980x200', [980, 280], 'div-gpt-ad-1350569504085-3').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-40').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-41').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-42').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_800x20', [800, 20], 'div-gpt-ad-1412711857330-0').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_topblurb_650x61', [650, 61], 'div-gpt-ad-1350569504085-6').addService(googletag.pubads());
+googletag.defineSlot('/2916070/zones_interstitial', [1, 1], 'div-gpt-ad-1421439075930-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/2916070/zones_interstitial', 'div-gpt-ad-1421439075930-0-oop').addService(googletag.pubads());
+	 googletag.pubads().enableSyncRendering();
+        //        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().setTargeting("tag", "www.dzone.com");
+    </script>
+
+    <!-- End of DART Code -->
+
+
+            <title>Subscribe And Share Calendars To Multiple Zimbra User Accounts | DZone</title>
+    
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="Comments for &quot;Subscribe And Share Calendars To Multiple Zimbra User Accounts&quot;" href="/crss/node/104677" />
+
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+                <link type="text/css" rel="stylesheet" media="all" href="http://cdn.dzone.com/sites/all/files/css/css_3df2d940aa7ce4ed83cc753692abdbbe.css" />
+<link type="text/css" rel="stylesheet" media="print" href="http://cdn.dzone.com/sites/all/files/css/css_1da756ecc628791197c909bc0992c99f.css" />
+
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dzone2012/css/style-top.css" />
+
+<!--    -->
+                        <META NAME="Description" CONTENT="">
+            
+    
+    <!-- RSS link -->
+    
+            <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-410289-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>                                
+</head>
+<body class="sidebar-right">
+
+
+
+<div id="page_wrapper">
+
+
+<style>
+
+#logo-dzone-new {
+    float: left;
+    margin-right: 10px;
+    padding-right: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: -2px;
+    padding-left: 17px;
+}
+
+#topnav-with-logo {
+    padding-top: 1px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: auto;
+}
+
+#primary-nav ul {
+    margin-top: 17px;
+    padding: 0;
+    display: inline-flex;
+    list-style-type: none;
+    margin-left: -6px;
+}
+
+#primary-nav li {
+    display: inline-block;
+    padding-right: 13px;
+    margin-top: 6px;
+}
+
+#primary-nav li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #009ad9;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    line-height: 1.3;
+    font-family: 'ProximaNovaReg', helvetica, arial, sans-serif;
+    letter-spacing: 1px;
+    padding-right: 0px;
+}
+
+#primary-nav li a:hover {
+    border-bottom: 2px solid #81c04f !important;
+}
+
+#primary-nav li a.active {
+    border-bottom: 2px solid #81c04f;
+}
+
+
+#topics-nav {
+    clear: both;
+    background-color: #5c6e7e;
+    padding: 11px 0px 11px 0px;
+    margin-top: 10px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+#topics-nav-small-window {
+    clear: both;
+    background-color: #5c6e7e;
+    padding: 11px 0px 11px 0px;
+    margin-top: 10px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin-left: 0px;
+}
+
+#topics-nav li {
+    font-size: 13px;
+    display: inline;
+    line-height: 1.3;
+}
+
+#topics-nav-small-window li {
+    font-size: 13px;
+    display: inline;
+    line-height: 1.3;
+}
+
+#topics-nav li a:hover {
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+}
+
+#topics-nav-small-window li a:hover {
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+}
+
+#topics-nav li a.active {
+    text-decoration: none;
+    background: #81c04f;
+}
+
+#topics-nav-small-window li a.active {
+    text-decoration: none;
+    background: #81c04f;
+}
+
+#nav-all-new {
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 1000px;
+    text-align: left;
+    background: #fff;
+}
+
+#topnav-with-logo {
+    padding-top: 1px;
+}
+
+#search_bar {
+    margin-top: -8px;
+    margin-right: 0px;
+}
+
+#search_bar .form-text  {
+    width: 145px;
+    height: 20px;
+}
+
+#topics-nav li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 11px 5px 11px 5px;
+}
+
+#topics-nav-small-window li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 11px 5px 11px 5px;
+}
+
+#topics-nav ul {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 17px;
+}
+
+#topics-nav-small-window ul {
+    margin-left: 20px;
+}
+
+#topics-nav li span {
+    color: #73b9e6;
+    text-transform: uppercase;
+    font-family: "ProximaNovaBold", Helvetica, Arial, sans-serif;
+}
+
+#topics-nav-small-window li span {
+    color: #73b9e6;
+    text-transform: uppercase;
+    font-family: "ProximaNovaBold" Helvetica, Arial, sans-serif;
+}
+
+#edit-query-wrapper #edit-sa {
+    display: none;
+}
+
+#empty-space-nav  {
+    height: 10px;
+}
+
+input#edit-sa {
+    color: transparent;
+    background: transparent;
+    border: transparent;
+}
+
+
+
+#primary-nav-ul{
+    list-style:none;
+    float:left; /* Clear floats */
+
+}
+
+/*--- DROPDOWN ---*/
+#primary-nav-ul ul{
+    background:#f1f2f2;
+    list-style:none;
+    display: none;
+    z-index: 9999;
+}
+
+#primary-nav-ul ul a{
+    text-transform: capitalize;
+}
+#primary-nav-ul li:hover ul{
+    margin-top: -2px;
+    padding: 8px 2px 13px 12px;
+    background-color: #009ad9;
+    position: absolute;
+    margin-left: -10px;
+    display: inline-block;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+#primary-nav-ul li:hover a{
+    text-decoration: none;
+    border: none;
+
+}
+
+#primary-nav-ul li:hover ul a{
+    font-size: 14px;
+}
+
+#primary-nav-ul li:hover ul a:hover {
+    text-decoration: underline;
+    border-bottom: none !important;
+}
+
+.zone-title {
+    background-image: url("http://cdn.dzone.com/static/images/slash-big.png");
+    font-family: "ProximaNovaReg";
+    float: left;
+    width: 261px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    height: 70px;
+    display: none;
+}
+
+.zone-title p {
+    padding-top: 16px;
+    font-size: 17px;
+    text-align: center;
+    color: #81c04f;
+    text-transform: lowercase;
+}
+
+.zone-title p a {
+    color: #81c04f;
+    text-decoration: none;
+}
+
+.zone-title p a:hover {
+    color: #5c6e7e;
+    text-decoration: none;
+}
+
+.zone-title p a:active {
+    color: #81c04f;
+    text-decoration: none;
+}
+
+#topnav-uppersection {
+    height: 40px;
+}
+
+
+#post-content-link a {
+    color: #fff !important;
+}
+
+#more-zone-links a {
+    color: #fff !important;
+}
+
+.post-link {
+    background-color: #009ad9;
+    padding: 0 10px 3px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+li#post-content-link {
+    padding-right: 0px !important;
+}
+
+.more-zones {
+    width: 70px;
+    background-color: #009ad9;
+    padding: 0 0 5px 18px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+@-moz-document url-prefix() {
+    .zone-title {
+        background-image: url("http://cdn.dzone.com/static/images/slash-big.png");
+        font-family: "ProximaNovaReg";
+        float: left;
+        width: 264px;
+        background-repeat: no-repeat;
+        background-position-x: 17px;
+        height: 70px;
+    }
+
+    .zone-title p a {
+        color: #81c04f;
+        text-decoration: none;
+    }
+
+    .zone-title p a:hover {
+        color: #5c6e7e;
+        text-decoration: none;
+    }
+
+    .zone-title p a:active {
+        color: #81c04f;
+        text-decoration: none;
+    }
+
+    #primary-nav ul {
+        margin-top: 17px;
+        padding: 0;
+        display: inline-flex;
+        list-style-type: none;
+        margin-left: -17px;
+    }
+
+    #primary-nav-ul ul{
+        background:#f1f2f2;
+        list-style:none;
+        display: none;
+        z-index: 9999;
+    }
+
+    #topics-nav-small-window ul{
+        list-style:none;
+        z-index: 9999;
+    }
+
+    #primary-nav-ul ul a{
+        text-transform: capitalize;
+    }
+    #primary-nav-ul li:hover ul{
+        margin-top: -2px;
+        padding: 8px 8px 14px 17px;
+        background-color: #009ad9;
+        position: absolute;
+        margin-left: -18px;
+        display: inline-block;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    #more-zone-links ul li a{
+        display: none;
+    }
+
+    #more-zone-links ul li a:hover{
+        display: inline-block;
+    }
+
+
+
+    #primary-nav-ul li:hover a{
+        text-decoration: none;
+        border: none;
+
+    }
+
+    #topics-nav-small-window li:hover a{
+        text-decoration: none;
+        border: none;
+
+    }
+
+    #primary-nav-ul li:hover ul a{
+        font-size: 14px;
+    }
+
+    #primary-nav-ul li:hover ul a:hover {
+        text-decoration: underline;
+    }
+
+    #topics-nav li a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 11px 5px 12px 5px;
+    }
+
+    #topics-nav-small-window li a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 11px 5px 12px 5px;
+    }
+}
+
+@media (max-width: 1050px) {
+    #topics-nav{
+        display: none;
+    }
+
+    #search_bar {
+        margin-top: -16px;
+        padding-right: 15px;
+    }
+
+}
+@media (min-width: 1050px) {
+    #topics-nav-small-window {
+        display: none;
+    }
+
+}
+
+</style>
+
+
+
+
+<div id="nav-all-new">
+
+    <div id="topnav-with-logo">
+        <div id="topnav-uppersection">
+
+            <div id="logo-dzone-new">
+                <a href="http://www.dzone.com/links/index.html"><img src="http://cdn.dzone.com/static/images/TOP_NAV_LOGO.png" style="width:170px"></a>
+            </div>
+
+            <div class="zone-title">
+                <p><a href="/snippets">Snippets</a></p>
+            </div>
+
+            <div id="primary-nav">
+                <ul id="primary-nav-ul">
+                    <li><a href="http://www.dzone.com/links/index.html" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Home']);">Links</a></li>
+                    <li><a href="http://refcardz.dzone.com" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Refcardz']);">Refcardz</a></li>
+                    <li><a href="http://dzone.com/page/research" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Guides']);">Guides</a></li>
+                    <li><a href="http://dzone.com/page/videos" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Videos']);">Videos</a></li>
+                    <li><a href="http://dzone.com/corporate/about" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'About']);">About</a></li>
+                    <div class="post-link">
+                        <li id="post-content-link"><a href="http://dzone.com/node/add" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Contribute']);">Post <img src="http://cdn.dzone.com/static/images/down_arrow.png" style="width:12px; vertical-align: middle;"> </a>
+                            <ul>
+                                <li><a href="http://dzone.com/node/add/article">Article</a></li><br>
+                                <li><a href="http://www.dzone.com/links/add.html">Link</a></li><br>
+                                <li><a href="http://dzone.com/node/add/code-snippet">Code Snippet</a></li><br>
+                                <li><a href="http://java.dzone.com/node/add/announcement">Announcement</a></li><br>
+
+                            </ul>
+                        </li>
+                    </div>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="user-log-in">
+            <div id = 'menu_login'>
+                                    <a href = "/user">LOG IN</a> or <a href = "/user/register?clean=true">JOIN</a>
+                            </div>
+        </div>
+
+
+    </div>
+
+    <div id="topics-nav">
+        <ul>
+            <li><span>Zones:</span></li>
+            <li><a  href="http://dzone.com/mz/agile" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Agile']);">Agile</a></li>
+            <li><a  href="http://dzone.com/mz/big-data" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'BigData']);">Big Data</a></li>
+            <li><a  href="http://dzone.com/mz/cloud" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Cloud']);">Cloud</a></li>
+            <li><a  href="http://dzone.com/mz/devops" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'DevOps']);">DevOps</a></li>
+<!--            <li><a --><!--class="active"--><!-- href="http://eclipse.dzone.com/" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Eclipse']);">Eclipse</a></li>-->
+            <li><a  href="http://dzone.com/mz/enterprise-integration" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Enterprise Integration']);">Integration</a></li>
+            <li><a  href="http://dzone.com/mz/iot" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'IoT']);">IoT</a></li>
+            <li><a  href="http://java.dzone.com" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Javalobby']);">Java</a></li>
+            <li><a  href="http://dzone.com/mz/mobile" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Mobile']);">Mobile</a></li>
+            <li><a  href="http://dzone.com/mz/nosql" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'NoSQL']);">NoSQL</a></li>
+            <li><a  href="http://dzone.com/mz/performance" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Performance']);">Performance</a></li>
+            <li><a  href="http://dzone.com/mz/sql">SQL</a></li>
+            <li><a  href="http://dzone.com/mz/html5" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Web Dev']);">Web Dev</a></li>
+            <div id="search_bar">
+                <form action="/search/google"  accept-charset="UTF-8" method="get" id="google-cse-searchbox-form">
+<div><input type="hidden" name="cx" id="edit-cx" value="010821965829155306098:ogyaz_5nsc8"  />
+<input type="hidden" name="cof" id="edit-cof" value="FORID:11"  />
+<div class="form-item" id="edit-query-wrapper">
+ <input type="text" maxlength="128" name="query" id="edit-query" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-sa" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-e39317598e2fb6ac8ff55575b5899fde" value="form-e39317598e2fb6ac8ff55575b5899fde"  />
+<input type="hidden" name="form_id" id="edit-google-cse-searchbox-form" value="google_cse_searchbox_form"  />
+
+</div></form>
+            </div>
+        </ul>
+
+
+    </div>
+
+    <div id="topics-nav-small-window">
+        <ul>
+            <li><span>Zones:</span></li>
+            <li><a  href="http://dzone.com/mz/agile" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Agile']);">Agile</a></li>
+            <li><a  href="http://dzone.com/mz/big-data" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'BigData']);">Big Data</a></li>
+            <li><a  href="http://dzone.com/mz/cloud" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Cloud']);">Cloud</a></li>
+            <li><a  href="http://dzone.com/mz/devops" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'DevOps']);">DevOps</a></li>
+<!--            <li><a --><!--class="active"--><!-- href="http://eclipse.dzone.com/" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Eclipse']);">Eclipse</a></li>-->
+            <li><a  href="http://dzone.com/mz/enterprise-integration" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Enterprise Integration']);">Integration</a></li>
+            <li><a  href="http://dzone.com/mz/iot" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'IoT']);">IoT</a></li>
+            <li><a  href="http://java.dzone.com" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Javalobby']);">Java</a></li>
+            <li><a  href="http://dzone.com/mz/mobile" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Mobile']);">Mobile</a></li>
+            <li><a  href="http://dzone.com/mz/nosql" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'NoSQL']);">NoSQL</a></li>
+            <li><a  href="http://dzone.com/mz/performance" onClick="_gaq.push(['_trackEvent', 'zones', 'click', 'Performance']);">Performance</a></li>
+            <li><a  href="http://dzone.com/mz/html5" onClick="_gaq.push(['_trackEvent', 'TopMenu', 'click', 'Web Dev']);">Web Dev</a></li>
+            <div id="search_bar">
+                <form action="/search/google"  accept-charset="UTF-8" method="get" id="google-cse-searchbox-form-1">
+<div><input type="hidden" name="cx" id="edit-cx-1" value="010821965829155306098:ogyaz_5nsc8"  />
+<input type="hidden" name="cof" id="edit-cof-1" value="FORID:11"  />
+<div class="form-item" id="edit-query-1-wrapper">
+ <input type="text" maxlength="128" name="query" id="edit-query-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-sa-1" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-7878f66896e5abb324b788b8390fda1f" value="form-7878f66896e5abb324b788b8390fda1f"  />
+<input type="hidden" name="form_id" id="edit-google-cse-searchbox-form-1" value="google_cse_searchbox_form"  />
+
+</div></form>
+            </div>
+        </ul>
+    </div>
+
+    <div id="empty-space-nav">
+
+    </div>
+
+</div>
+
+
+
+
+<div class = "siteHeader">
+</div>
+
+
+<div id="header-region" class="clear-block">
+</div>
+
+<div id="wrapper" class="fewerAds">
+<div id="container" class="clear-block">
+    <div id="header">
+        <div id="masthead">
+
+            <div id="site_id">
+                                    <a href="/" title="DZone: Your Personal Tech Universe"><img class="dz_logo"
+                                                                                src="/sites/all/themes/dzone2012/images/mh_dzone_logo.png"
+                                                                                alt="DZone: Your Personal Tech Universe" title="DZone: Your Personal Tech Universe" /></a>
+                    <!--                <div class="site_name"><a href="/" title="--><!--">--><!--</a></div>-->
+                    <!--				<a href="/" title="--><!--"><img class="site_logo" src="--><!--"-->
+                    <!--					 alt="--><!--" title="--><!--" /></a>-->
+                    <!--				<span class="site_slogan">--><!--</span>-->
+
+                            </div>
+
+                            <div class="mh_leader">
+                    <div class="leaderboard">
+                        <!-- zones_masthead_728x90_default -->
+                        <div id='div-gpt-ad-1350569504085-1'>
+                            <script type='text/javascript'>
+                                googletag.display('div-gpt-ad-1350569504085-1');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            
+            
+        </div>
+    </div>
+
+
+    <div id="siteBar">
+        
+            <div class="site_name"><a href="/snippets" title="Snippets">Snippets</a></div>
+            <div class = "textads">
+                <!-- zones_masthead_728x90_default -->
+                <div id='div-gpt-ad-1350569504085-5' style='width:800px; height:20px;'>
+                    <script type='text/javascript'>
+                        googletag.display('div-gpt-ad-1350569504085-5');
+                    </script>
+                </div>
+            </div>
+            </div>
+
+    <!--    <div class="topics-trending fancyfont">-->
+    <!--    -->    <!--    </div>-->
+
+
+    <div id="superboard">
+                <!-- zones_superboard_980x200 -->
+        <div id='div-gpt-ad-1350569504085-3' style='width:980px;'>
+            <script type='text/javascript'>
+                googletag.display('div-gpt-ad-1350569504085-3');
+            </script>
+        </div>
+        <!-- End DART Code-->
+    </div>
+
+
+
+<!-- end of header -->
+<div id="center" class=""><div id="squeeze">
+        <div id="article">             <!-- Snippets Message Header -->
+                            <div id="snippets_header">
+                    <div  id="snippets_description">
+                        DZone Snippets is a public source code repository. Easily build up your personal collection of code snippets, categorize them with tags / keywords, and share them with the world
+                    </div>
+
+                    <div id="snippets_button">
+                        <a href = "http://dzone.com/node/add/code-snippet"><img src = '/sites/all/themes/dzone2012/images/post_snippet_button.png' ></a>
+                    </div>
+                </div>
+                        <div style="clear:both;"></div>
+                                                                                        
+                <!--Author Block-->
+                                    <div class="text-ad">
+                        <div id='div-gpt-ad-1412711857330-0' style='width:800px; height:20px;'>
+                            <div style="display: inline-block"><img src="http://cdn.dzone.com/static/images/orange-arrow.png" style="width:8px; vertical-align: middle;";></div>
+                            <div style="display: inline-block"><script type='text/javascript'>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412711857330-0'); });
+                                </script></div>
+                        </div>
+                    </div>
+                    <div class="meta">
+
+                        
+                                                <div class="submitted">
+                            <div id="author">
+                                <a href="/users/dzonesnippets"><img src="/sites/all/files/avatars/picture-1018055.png" style="width:43px; float:left; margin-right: 10px;"></a>
+                                                                <a href="/users/dzonesnippets"><b id="authorname">Snippets Manager</b> </a>
+                                <ul class="authorMetaData">
+                                                                                                                                                                                                                                                                                            </ul>
+
+                            </div>
+
+                        </div><div style="clear:both;"></div>
+                        
+                                                    <div  id="author_block" style=" padding: 5px; padding-right: 10px; margin-top: 7px; margin-bottom:10px;">
+                                <!--                                 -->                                <p style="padding-left: 80px; padding-top: 0; margin-top: 0;">
+                                     Snippets has posted 5883 posts at DZone.<a href='/users/dzonesnippets'> View Full User Profile</a></p></div>
+                                            </div>
+                                <!--End Author Block-->
+
+                                    <div id="articleHead">
+                        <!-- Print Breadcrumb for Tutorials -->
+                                                <h1>Subscribe And Share Calendars To Multiple Zimbra User Accounts</h1>                    </div>
+                                            <div class="under_the_title">
+                            <div id="date">08.23.2008                            </div>
+                            <span style="margin:0 8px;color:#ddd;">|</span>
+                    <span style="padding: 5px; vertical-align: middle; font-size:14px;">
+                        3471 views                    </span>
+                            <span style="margin:0 8px;color:#ddd;">|</span>
+
+                            <!-- AddThis Button BEGIN -->
+                            <!--                    <a href="/forward?path=node/--><!--" style="vertical-align: middle;"><img style="margin: 8px 5px 0 5px; vertical-align: top;" width="20" height="20" src="http://cdn.dzone.com/links/themes/reader/images/actions/email-32x32.png" border="0"> Email</a>-->
+                            <div class="addthis_toolbox addthis_default_style " style="display:inline-block; vertical-align:middle;margin-top:8px;">
+                                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                                <a class="addthis_button_tweet"></a>
+                                <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                                <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                                <script type="IN/Share" data-counter="right"></script>
+                            </div>
+                            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f34528f655fc4f0"></script>
+                        </div>
+
+                        <!-- AddThis Button END -->
+                                                            <div id="articleText" class="">
+                                
+                <ul id="sharebar" style="background:#FFFFFF;border-color:#CCCCCC;margin-top:0px;width: 78px; float: left; margin-right:10px;"><li><script type="text/javascript">var dzone_url = 'http://www.dzone.com/snippets/subscribe-and-share-calendars';</script>
+<script type="text/javascript">var dzone_title = 'Subscribe And Share Calendars To Multiple Zimbra User Accounts';</script>
+<script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script></li><li><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://www.dzone.com/snippets/subscribe-and-share-calendars" data-text="Subscribe And Share Calendars To Multiple Zimbra User Accounts" data-via="dzone">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li><li><!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="tall" href="http://www.dzone.com/snippets/subscribe-and-share-calendars"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></li><li><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.dzone.com/snippets/subscribe-and-share-calendars&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=60"scrolling="no" frameborder="0" style="border:none; width:58px; height:62px;" allowTransparency="true"></iframe></li><li><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-counter="top"></script></li><li><a href="http://www.reddit.com/r/programming/submit" onclick="window.location = 'http://www.reddit.com/r/programming/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" / width="64"> </a></li></ul>
+
+<!--Code Snippet (Only print like this for old Snippets)-->
+    <pre>
+        // calendars are created in a single account called "shares@domain.com"
+// those calendars are then shared to all users in Zimbra
+
+</pre><pre class='brush:js'>
+#!/usr/local/bin/ruby
+
+# == Synopsis 
+#   This application updates RSS Feed folders in Zmibra user accounts.  
+#
+# == Examples
+#   This command does RSS folder updates.
+#     update_feeds 
+#
+#   Other examples:
+#     ruby_cl_skeleton -q bar.doc
+#     ruby_cl_skeleton --verbose foo.html
+#
+# == Usage 
+#   update_feeds [options]
+#
+#   For help use: update_feeds -h
+#
+# == Options
+#   -u, --user          User to synchronize {uid|email|all}
+#   -h, --help          Displays help message
+#   -t, --test          Displays test/debug information and logs DEBUG messages
+#   -v, --version       Display the version, then exit
+#   -q, --quiet         Output as little as possible, overrides verbose
+#   -V, --verbose       Verbose output
+#   TO DO - add additional options
+#
+# == Author
+#   Matt Mencel
+#
+# == Copyright
+#   Copyright (c) 2008 Matt Mencel. Licensed under the MATT License:
+
+require "date"
+require "logger"
+require "pathname"
+require "open3"
+require "optparse"
+require "ostruct"
+require "rdoc/usage"
+
+require 'rubygems'
+require 'icalendar'
+require 'rss/1.0'
+require 'rss/2.0'
+require 'open-uri'
+require 'hpricot'
+
+
+class App
+  VERSION = '0.0.1'
+    
+  attr_reader :options
+
+  def initialize(arguments, stdin)
+    @arguments = arguments
+	puts "INITARGS: #{@arguments}"
+	puts "ARGSLGTH: #{@arguments.size}"
+    @stdin = stdin
+		    
+    # Set defaults
+    @options = OpenStruct.new
+    @options.verbose = false
+    @options.quiet = false
+    # TO DO - add additional defaults
+  end
+
+
+  # Parse options, check arguments, then process the command
+  def run
+    puts "OPTS: #{parsed_options?}"
+	puts "VALIDARGS: #{arguments_valid?}"
+    if parsed_options? && arguments_valid? 
+      puts "Start at #{DateTime.now}\\n\\n" if @options.verbose
+      output_options if @options.verbose # [Optional]
+      process_arguments            
+      process_command
+      puts "\\nFinished at #{DateTime.now}" if @options.verbose
+    else
+      output_usage
+    end
+  end
+  
+  protected
+  def parsed_options?
+    # Specify options
+    opts = OptionParser.new
+    opts.on('-h', '--help')       { output_help }
+    opts.on('-v', '--version')    { output_version ; exit 0 }
+    opts.on('-V', '--verbose')    { @options.verbose = true }  
+    opts.on('-q', '--quiet')      { @options.quiet = true }
+    # TO DO - add additional options
+    opts.on('-u', '--user USER', 'User to sync RSS folders {uid|mail|all}.') do |u|
+      options.user = u
+    end
+    opts.parse!(@arguments) rescue return false
+
+    process_options
+    true
+  end
+
+  # Performs post-parse processing on options
+  def process_options
+    @options.verbose = false if @options.quiet
+  end
+
+  def output_options
+    puts "Options:\\n"
+
+    @options.marshal_dump.each do |name, val|
+      puts "  #{name} = { #{val}"
+    end
+  end
+
+  # True if required arguments were provided
+  def arguments_valid?
+    # TO DO - implement real logic here
+    puts "VALIDARGS: #{@arguments}"
+    puts "ARGV Length: #{@arguments.size}"
+    true if @arguments.length >= 0
+  end
+
+  # Setup the arguments
+  def process_arguments
+    # TO DO - place in local vars, etc
+  end
+
+  def output_help
+    output_version
+    RDoc::usage() #exits app
+  end
+
+  def output_usage
+    RDoc::usage('usage') # gets usage from comments above 
+  end
+
+  def output_version
+    puts "#{File.basename(__FILE__)} version #{VERSION}"
+  end
+
+  def process_command
+    # Setup Logger
+    $logger = Logger.new('rss_folder.log', 'daily')
+    if @options.verbose
+      $logger.level = Logger::DEBUG
+    else
+      $logger.level = Logger::INFO
+    end
+      
+    # OPEN THE ZMPROV PROMPT
+      
+    #$cmdin, $cmdout, $cmderr = Open3.popen3("zmprov")
+    $cmdin, $cmdout, $cmderr = Open3.popen3("zmprov 2>&1")
+    puts $cmdout.readpartial(4096)
+    # Create RSS and Calendar Hashes
+    feeds=Hash.new
+    calendars = Hash.new
+    
+    $cmdin.puts("sm shares@domain.com")
+    $cmdin.puts("gaf")
+    $cmdin.puts("sm")
+    count=0
+    $cmdout.each do |line|
+      count += 1 if line == "\n"
+      line.split("  ").each do |subline|
+        if subline.include?("Feeds/")
+          record = subline.split("(")
+          feeds[record[0].rstrip] = record[1].rstrip.chop
+        elsif subline.include?("Calendars/")
+          if subline.include?("(")
+            record = subline.split("(")
+            calendars[record[0].rstrip] = record[1].rstrip.chop
+          else  
+            calendars[subline.chomp] = "from feed"
+          end
+        end
+      end
+      break if count == 2 
+    end
+      
+    puts "FEEDS: #{feeds.inspect}"
+    puts "CALENDARS: #{calendars.inspect}"
+    
+    # Testing RSS Feeds for Admin COS Users
+    #users = `zmprov sa zimbraCOSId=5487b59c-de80-4220-a819-07a6a84ed122`.split()
+    users=[]  # start with an empty array
+    puts "Fetching employee list..."
+    employees = Hash.new
+    employees_array = Array.new(`zmprov sa "(zimbraCOSId=70fadfad-cf1f-4f67-bb58-dd3e44f77942)"`.split() + `zmprov sa "(zimbraCOSId=5487b59c-de80-4220-a819-07a6a84ed122)"`.split())
+    employees_array.each do |emp|
+      employees[emp.downcase] = 1
+    end
+    f = File.open("testusers.full") or die "Unable to open file..."
+    f.each_line {|line|
+      users &lt;&lt; line.chomp.downcase
+    }
+    user_count = users.size()
+    # Refresh Feeds In Share Account
+      feeds.each_pair {|folder, feed_url|
+         folder_path = Pathname.new(folder)
+         puts "REFRESH FEED #{folder_path}"
+         refresh_feed("shares@doain.com", folder_path, feed_url)
+       }
+      
+       # Refresh Calendars in Share Account
+       calendars.each do |calendar, calendar_url|
+         folder_path = Pathname.new(calendar)
+         puts "REFRESH CALENDAR: #{folder_path}"
+         if folder_path.to_s.include?("Athletics")
+           cal = build_calendar_ics("Athletics")
+           pru(cal, folder_path)
+         elsif folder_path.to_s.include?("Fine Arts")
+           cal = build_calendar_ics("Art Gallery, BCA, Fine Arts, Theater")
+           pru(cal, folder_path)
+         elsif folder_path.to_s.include?("Registrar")
+           cal = build_calendar_ics("Registrar")
+           pru(cal, folder_path)
+         else
+           refresh_calendar("shares@domain.com", folder_path, calendar_url)
+         end
+       end
+        
+    # Subscribe users to Feeds and Calendars
+    user_count = users.size()
+    t = Time.now
+    users.each do |user|
+      puts "Creating Shares for #{user}...#{user_count-=1} remaining"
+      feeds.each_pair {|folder, feed_url|
+        folder_path = Pathname.new(folder)
+        create_share(user, employees, folder_path)
+      }
+        
+      calendars.each_pair do |folder, calendar_url|
+        folder_path = Pathname.new(folder)
+        create_share(user, employees, folder_path)
+      end
+      if user_count%25 == 0
+        t2 = Time.new
+        diff = t2.to_i - t.to_i
+        puts "#{(diff)*(user_count/25/60)} minutes remaining"
+        t = Time.new
+      end
+    end
+      
+
+
+	        
+    #process_standard_input # [Optional]
+  end
+
+  def process_standard_input
+    input = @stdin.read      
+    # TO DO - process input
+					      
+    # [Optional]
+    # @stdin.each do |line| 
+    #  # TO DO - process each line
+    #end
+  end
+end
+
+
+# TO DO - Add Modules, Classes, etc
+### FUNCTIONS ###
+
+#def create_feed_folder(user, folder_path, feed_url)
+#  $logger.debug("DEBUG: zmmailbox -z -m #{user} createFolder -u '#{feed_url}' '#{folder_path}'")
+#  $logger.info("Creating missing folder #{folder_path} for #{user}")
+#  cmd_result = cmd_to_sys("zmmailbox -z -m #{user} cf -u '#{feed_url}' '#{folder_path}'")
+#  $logger.debug("ERROR?: #{cmd_result[1]}")
+#  if check_command_result(cmd_result[1], user, feed_url) == "unknown folder"
+#    $logger.warn(cmd_result[1])
+#    create_feed_folder(user, folder_path.dirname(), nil)
+#    $logger.debug("ATTEMPTING TO RECREATE: #{folder_path}")
+#    cmd_result = cmd_to_sys("zmmailbox -z -m #{user} cf -u '#{feed_url}' '#{folder_path}'")
+#    check_command_result(cmd_result[1], user, feed_url)
+#  end
+#  $logger.debug("Created Folder #{folder_path}")
+#end
+
+def build_calendar_ics(cal_list)
+  # Create a new calendar object
+  cal = Calendar.new
+  cal_list.split(",").each do |cal_name|
+    $all_day = false
+    case cal_name
+    when /Art Gallery/  ; source = ART_GAL_URL
+    when /Athletics/  ; source = ATHLETICS_URL
+    when /BCA/        ; source = BCA_URL
+    when /Fine Arts/  ; source = FA_URL
+    when /Registrar/  ; source = REG_URL
+    when /Theater/    ; source = THEATER_URL
+    end
+    content = "" # raw content of rss feed will be loaded here
+    open(source) do |s| content = s.read end
+    rss = RSS::Parser.parse(content, false)
+    puts "Fetching #{rss.items.size} RSS items for: #{cal_name}"
+    #print "number of items: ", rss.items.size, "\n"
+    
+    rss.items.each do |item|
+      result = parse_feeds_for_calendars(item)
+      event_location = result.split(" :: ")[0]
+      item.description = result.split(" :: ")[1]
+            
+      #puts DateTime.parse(item.date.to_s).new_offset(of=0)
+      #puts Date.parse(item.date.to_s)
+      endtime = item.date+(60*60*2)
+      cal.event do
+        if $all_day
+          dtstart Date.parse(item.date.to_s)
+          dtend   Date.parse(item.date.to_s)
+        else
+          dtstart   DateTime.parse(item.date.to_s).new_offset(of=0)
+          dtend     DateTime.parse(endtime.to_s).new_offset(of=0)
+        end
+        summary   item.title
+        description   item.description
+        location    event_location
+        uid       "#{item.link}#{DateTime.parse(item.date.to_s)}"
+      end
+    end
+  end
+  return cal
+end
+
+def parse_feeds_for_calendars(item)
+  if item.link.include?("athletics")
+    $all_day = false
+    #puts "DESC: "+item.description
+    #puts "LINK: "+item.link
+    #puts "DATE: #{item.date}"
+    event_data = item.description.split(" - ")
+    event_location = event_data[0].split("at ")[1]
+    event_time = event_data[1].split("-")[0]
+    if !event_time.include?(":")
+        event_time = "#{event_time.split(' ')[0]}:00 #{event_time.split(' ')[1]}"
+    end
+    if event_time.include?('p.m.')
+      event_time = "#{event_time.split(' ')[0].split(':')[0].to_i + 12}:#{event_time.split(' ')[0].split(':')[1]}"
+    elsif event_time.include?("a.m.")
+      event_time = event_time.split(' ')[0]
+      event_time = "0#{event_time}" if event_time.split(':')[0].to_i &lt; 10 
+    end
+    if event_time.include?("TBA")
+      $all_day = true
+      item.date = "#{Date.parse(item.date.to_s)}T08:00:00+00:00"
+    else
+      item.date = "#{Date.parse(item.date.to_s)}T#{event_time}:00+00:00"
+    end
+    item.description = "#{event_location} :: #{item.link}"
+    #html/body/table/tbody/tr/td/div[2]/div/table/tbody/tr/td[2]/table/tbody/tr[7]/td/table
+  else
+    @url = item.link
+    @response = ''
+    # open-uri RDoc: http://stdlib.rubyonrails.org/libdoc/open-uri/rdoc/index.html
+    open(@url, "User-Agent" => "Ruby/#{RUBY_VERSION}",
+      "From" => "help@domain.com",
+      "Referer" => "http://zimbra.domain.com") { |f|
+        puts "Fetched document: #{f.base_uri}"
+        #puts "\\t Content Type: #{f.content_type}\\n"
+        #puts "\\t Charset: #{f.charset}\\n"
+        #puts "\\t Content-Encoding: #{f.content_encoding}\\n"
+        #puts "\\t Last Modified: #{f.last_modified}\\n\\n"
+    
+        # Save the response body
+        @response = f.read
+      }
+      #Rdoc: http://code.whytheluckystiff.net/hpricot/
+      doc = Hpricot(@response)
+
+      event_location = (doc/"/html/body/div/div[4]/div/dl/dd[2]").inner_html.split(': &lt;/strong>')[1].strip
+      item.description = "#{event_location} :: #{item.description}\n\n#{item.link}"
+    end
+    
+end
+  
+def create_share(user, employees, folder_path)
+  if folder_path.to_s.include?("Staff") && !employees.has_key?(user)
+    puts "Not Staff...continuing with next folder"
+    return
+  end
+  $logger.debug("DEBUG: zmmailbox -z -m #{user} createMountpoint -c purple '#{folder_path}' shares@domain.com '#{folder_path}'")
+  $logger.info("Creating missing share #{folder_path} for #{user}")
+  cmd_result = sm(user)
+  cmd_result = cm(user, folder_path)
+  #puts cmd_result
+  if cmd_result != nil
+    case cmd_result
+    when /ALREADY_EXISTS/ ; return
+    when /unknown folder/	; cf(user, folder_path)
+    when /permission denied/ ; mfg(user, folder_path)
+    else ; $logger.fatal("Unknown Error: #{cmd_result[1]} on share #{folder_path} for #{user}")
+	end
+    $logger.debug("ATTEMPTING TO RECREATE SHARE #{folder_path}")
+    create_share(user, folder_path)
+  else
+    $logger.info "Shared #{folder_path} with #{user}"
+  end
+end
+
+def is_integer(to_test)
+  begin
+    Integer(to_test)
+    return true
+  rescue ArgumentError
+    return false
+  end
+end
+
+def refresh_calendar(user, folder_path, calendar_url)
+  $logger.debug("DEBUG: zmmailbox -z -m #{user} syncFolder '#{folder_path}'")
+  cmd_result = sm(user)
+  #syncFolder
+  cmd_result = sf(folder_path)
+  #puts cmd_result
+  if cmd_result != nil
+    case cmd_result
+    when /unknown folder/	; puts "Missing or Bad Share!?"; exit
+	  end
+  else
+    $logger.info "Refreshed #{folder_path} for #{user}"
+  end
+end
+
+def refresh_feed(user, folder_path, feed_url)
+  $logger.debug("DEBUG: zmmailbox -z -m #{user} syncFolder '#{folder_path}'")
+  cmd_result = sm(user)
+  #Mark and Purge Old Messages
+  msg_ids_for_deletion = smb(folder_path, "before:-30days")
+  dm(msg_ids_for_deletion)
+  msg_ids_for_marking = smb(folder_path, "before:-1day")
+  if !msg_ids_for_marking.empty?
+    mmr(msg_ids_for_marking)
+  end
+  #syncFolder
+  cmd_result = sf(folder_path)
+  #puts cmd_result
+  if cmd_result != nil
+    case cmd_result
+    when /unknown folder/	; create_feed_folder(user, folder_path, feed_url)
+	  end
+  else
+    $logger.info "Refreshed #{folder_path} for #{user}"
+  end
+end
+
+def remove_feeds(user, folder_path, feed_url)
+  $logger.debug("CMD: zmmailbox -z -m #{user} deleteFolder '#{folder_path}'")
+  cmd_result = cmd_to_sys("zmmailbox -z -m #{user} df '#{folder_path}'")
+end
+
+#createFolder
+def cf(user, folder_path)
+  if folder_path.to_s.include?("Feeds")
+    zmcommand = "cf -c purple '#{folder_path}'"
+  elsif folder_path.to_s.include?("Calendars")
+    zmcommand = "cf -c purple -V appointment '#{folder_path}'"
+  end
+  #puts zmcommand
+  $cmdin.puts(zmcommand)
+  count = 0
+  while (( line = $cmdout.gets ))
+    count += 1
+    #puts "#{count}:: #{line}"
+    #puts is_integer(line.split.last)
+    if is_integer(line.split.last)
+      return
+    elsif line.include?("unknown folder")
+      $logger.warn(line)
+      cf(user, folder_path.dirname)
+      cm(user, folder_path)
+      return
+    else
+      $logger.fatal(line)
+      puts "EXITING::  #{line}"
+      exit
+    end
+  end
+end
+
+#createMountpoint
+def cm(user, folder_path)
+  if folder_path.to_s.include?("Feeds")
+    zmcommand = "cm -c purple '#{folder_path}' shares@domain.com '#{folder_path}'"
+  elsif folder_path.to_s.include?("Calendars")
+    zmcommand = "cm -c purple -V appointment '#{folder_path}' shares@domain.com '#{folder_path}'"
+  end
+  $cmdin.puts(zmcommand)
+  count=0
+  while (( line = $cmdout.gets ))
+    count += 1
+    #puts "#{count}:: #{line}"
+    if is_integer(line.split.last)
+      return
+    end
+    case line
+    when /ALREADY_EXISTS/ ; $logger.warn(line) ; return
+    when /NO_SUCH_ACCOUNT/ ; $logger.fatal(line) ; puts "EXITING::  #{line}"  ; exit
+    when /unknown folder/	; cf(user, folder_path) ; return
+    when /NO_SUCH_FOLDER/	; cf(user, folder_path) ; return
+    when /permission denied/ ; mfg(user, folder_path) ; sm(user) ; cm(user, folder_path) ; return
+    else ; $logger.fatal(line) ; puts "EXITING::  #{line}" ; exit
+	end
+  end
+end
+
+#deleteMessages
+def dm(msg_ids_for_deletion)
+  $cmdin.puts("dm #{msg_ids_for_deletion}")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("bogus")
+      $logger.info "Deleted #{msg_ids_for_deletion}"
+      return
+    end
+  end
+end
+
+#markFolderRead
+def mfr(folder_path)
+  $cmdin.puts("mfr '#{folder_path}'")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("bogus")
+      $logger.info "Marked Folder Read: #{folder_path}"
+      return
+    end
+  end
+end
+
+#markMessageRead
+def mmr(msg_ids_for_marking)
+  $cmdin.puts("mmr #{msg_ids_for_marking} 1")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("bogus")
+      $logger.info "Messages Marked Read: #{msg_ids_for_marking}"
+      return
+    end
+  end
+end
+
+
+#modifyFolderGrant
+def mfg(user, folder_path)
+  sm("shares@domain.com")
+  $cmdin.puts("mfg '#{folder_path}' account #{user} r")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("ERROR:") and !line.include?("bogus")
+      $logger.fatal(line)
+      puts "EXITING: #{line}"
+      exit
+    elsif line.include?("bogus")
+      $logger.info "Granted read permission to #{folder_path} for #{user}"
+      return
+    else
+      $logger.fatal(line)
+      puts "UNKNOWN ERROR: #{line}"
+      exit
+    end
+  end
+end
+
+#postRestUrl
+def pru(cal, folder_path)
+  f = File.new("cal.ics", "w") or die "Unable to create file..."
+  f.puts cal.to_ical
+  f.close
+  sm("shares@domain.com")
+  $cmdin.puts("pru \"#{folder_path}\" cal.ics")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("ERROR:") and !line.include?("bogus")
+      $logger.fatal(line)
+      puts "EXITING: #{line}"
+      exit
+    elsif line.include?("bogus")
+      $logger.info "ICS posted to #{folder_path}"
+      return
+    else
+      $logger.fatal(line)
+      puts "UNKNOWN ERROR: #{line}"
+      exit
+    end
+  end
+  exit
+end
+
+#searchMailbox for messages older than 30 days
+def smb(folder_path, date_fmt)
+  msg_ids = Array.new
+  $cmdin.puts("s -l 1000 -t message 'in:\"#{folder_path}\" #{date_fmt}'")
+  $cmdin.puts("bogus")
+  $cmdout.each do |line|
+    if line.include?("mess")
+      msg_ids &lt;&lt; line.split(' ')[1]
+    end
+    if line.include?("bogus")
+      return msg_ids.join(',')
+    end
+  end
+end
+
+#selectMailbox
+def sm(user)
+  $cmdin.puts("sm #{user}")
+  $cmdout.each do |line|
+    if line.include?("mailbox:")
+      return
+    elsif line.include?("NO_SUCH_ACCOUNT")
+      $logger.fatal(line)
+      puts "EXITING:: #{line}"
+      exit
+    else
+      $logger.fatal(line)
+      puts "UNKNOWN ERROR: #{line}"
+      exit
+    end
+  end
+end
+
+#syncFolder
+def sf(folder_path)
+  $cmdin.puts("sf \"#{folder_path}\"")
+  $cmdin.puts("sm")
+  count=0
+  while(( line = $cmdout.gets ))
+    count+=1
+    if line.include?("unknown folder:")
+      $logger.warn(line)
+      return line
+      elseif line.include?("ERROR")
+      $logger.fatal(line)
+      puts "UNKNOWN ERROR:: #{line}"
+      exit
+    end
+    return if count == 4
+  end
+end
+
+# Create and run the application
+include Icalendar
+app = App.new(ARGV, STDIN)
+app.run
+
+</pre><pre>    </pre>
+
+<!--Description-->
+
+<!--Language-->
+<!--<strong>Language:</strong> -->
+<!-- TAGS -->
+
+<ul class="tags">
+<span style="float: left;margin: 4px;font-weight: bold;">Tags: </span>
+<li class='tag' ><a href='/snippets/tag/Zimbra'>Zimbra</a></li></ul>
+<div style="clear:both;"></div>
+
+</div>
+        </div>
+    </div></div>
+<!-- end of squeeze, center (main content) -->
+            <div id="sidebar-right" class="sidebar">
+            
+                <style>
+
+
+                </style>
+
+
+                <div id="social-box">
+                    <div class="content-buttons-wrapper">
+                        <div class='content-buttons'>
+                            <div class="article-button">
+                                <a href="/node/add"><i class="icon-file"></i>  Publish an Article</a>
+                            </div>
+
+                            <div class="tip-button">
+                                <a href="mailto:newsdesk@dzone.com" ><i class="icon-envelope"></i> Share a Tip</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="width:282px" class="social-box-wrapper">
+                        <span style="font-size:16px; color: #5175B7; text-align: center; display: block;">Connect with DZone</span>
+                        <div id="followButtons" style="margin-top: 12px;">
+                            <a href="http://feeds.dzone.com/dzone/frontpage" target="_blank" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'RSS Frontpage']);" style="margin-left: 4px; margin-right:4px;" title="Subscribe to DZone's Popular Links feed"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/feed-32x32.png"/></a>
+                            <a href="http://www.linkedin.com/groups?gid=696877&trk=hb_side_g" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'Linkedin']);" style="margin-left: 4px; margin-right:4px;" target="_blank" title="Join the DZone LinkedIn group"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/linkedin-32x32.png"/></a>
+                            <a href="http://twitter.com/dzone" title="Follow DZone on Twitter" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'Twitter']);" style="margin-left: 4px; margin-right:4px;" target="_blank"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/twitter-32x32.png"/></a>
+                            <a href="http://www.facebook.com/home.php?#/pages/DZone/259639764711?ref=sgm" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'Facebook']);" style="margin-left: 4px; margin-right:4px;" target="_blank" title="Become a DZone fan on Facebook"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/facebook-32x32.png"/></a>
+                            <a href="https://plus.google.com/+dzone/posts" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'Google Plus']);" style="margin-left: 4px; margin-right:4px;"target="_blank" title="Follow DZone on Google+"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/google-32x32.png"/></a>
+                            <a  href="mailto:feedback@dzone.com" onClick= "_gaq.push(['_trackEvent','Social Buttons', 'Email']);" style="margin-left: 4px; margin-right:0px;" title="Email DZone"><img width="32" height="32" style="margin-right: 5px;" src="/sites/all/themes/dzone2012/images/email-32x32.png"/></a>
+                        </div>
+
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                    </div>
+                </div>
+
+
+
+                <div style="clear:both"></div>
+
+                <ul class="dzone-social-buttons" style="display:none;">
+                    <li><a href="mailto:newsdesk@dzone.com" class="got_a_tip" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'Tip Button']);">Got a story? Tell us!</a></li>
+                    <li>
+                                                                                    <a href="/rss.xml" class="dzone-social-rss" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone RSS']);"></a>
+                                                                        </li>
+                    <li><a href="https://plus.google.com/+dzone/posts" class="dzone-social-google"  onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Google+']);""></a></li>
+                    <li><a href="http://www.facebook.com/pages/DZone/259639764711" class="dzone-social-facebook"  onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Facebook']);""></a></li>
+                    <li><a href="https://twitter.com/#!/Dzone" class="dzone-social-twitter" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Twitter']);""></a></li>
+                    <li><a href="http://www.linkedin.com/groups/DZone-696877" class="dzone-social-linkedin" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone LinkedIn']);""></a></li>
+                    <!--                  <li><a href="#" class="careers-button" onClick= "pageTracker._trackEvent('Social Button Click', 'Careers Button');">Careers</a></li>-->
+
+                </ul>
+
+
+
+
+                <!--        Popular Snippets Sidebar Box-->
+                            <style>
+    #snippets_tags{
+        margin: 0 0 15px 0;
+        font-size:14px;
+        float:left;
+    }
+    #snippets_tags h2{
+        margin: 5px 0px;
+        padding: 5px 5px;
+        border-bottom: 2px solid #666;
+        font-family: "museoSans500","helvetica",Arial;
+        font-weight: bold;
+        font-size: 21px;
+        color: #666;
+    }
+</style>
+
+<div  id="snippets_tags"><h2>Popular Tags</h2><a class='tag' href = '/snippets/tag/Ruby'>Ruby</a> <a class='tag' href = '/snippets/tag/Rails'>Rails</a> <a class='tag' href = '/snippets/tag/javascript'>javascript</a> <a class='tag' href = '/snippets/tag/php'>php</a> <a class='tag' href = '/snippets/tag/Python'>Python</a> <a class='tag' href = '/snippets/tag/java'>java</a> <a class='tag' href = '/snippets/tag/html'>html</a> <a class='tag' href = '/snippets/tag/shell'>shell</a> <a class='tag' href = '/snippets/tag/SQL'>SQL</a> <a class='tag' href = '/snippets/tag/bash'>bash</a> <a class='tag' href = '/snippets/tag/MySQL'>MySQL</a> <a class='tag' href = '/snippets/tag/String'>String</a> <a class='tag' href = '/snippets/tag/Linux'>Linux</a> <a class='tag' href = '/snippets/tag/REBOL'>REBOL</a> <a class='tag' href = '/snippets/tag/csharp'>csharp</a> <a class='tag' href = '/snippets/tag/Perl'>Perl</a> <a class='tag' href = '/snippets/tag/C'>C</a> <a class='tag' href = '/snippets/tag/Array'>Array</a> <a class='tag' href = '/snippets/tag/css'>css</a> <a class='tag' href = '/snippets/tag/file'>file</a> <a class='tag' href = '/snippets/tag/rubyonrails'>rubyonrails</a> <a class='tag' href = '/snippets/tag/Unix'>Unix</a> <a class='tag' href = '/snippets/tag/XML'>XML</a> <a class='tag' href = '/snippets/tag/series60'>series60</a> <a class='tag' href = '/snippets/tag/regex'>regex</a> </div><div style="clear:both;"></div>            
+
+            
+            
+                <div class="latest-guide">
+                    <div class="latest-guide-image"><img src="http://cdn.dzone.com/static/images/research/APM/DZ_APM_Guide_Cover_1.png"></div>
+                    <div class="latest-guide-head"><h2>DZone’s Guide to <span>Performance &amp; Monitoring</span></h2>
+                        <p>Write more performant applications and learn where your applications are slowing down with DZone’s latest research guide.</p>
+                    </div>
+                    <div class="latest-guide-btn">
+                        <p><input type="submit" value="Download" class="latest-guide-download-button" onClick="window.location.href='http://dzone.com/research/2015-guide-to-performance-and-monitoring'; ga('send', 'event', 'EI Guide', 'click', 'sidebar');"></p>
+                    </div>
+                </div>
+
+                <div id="mh_rectangle">
+
+                    <!-- zones_sidebar_336x280_default -->
+                    <div id='div-gpt-ad-1350569504085-2' style='width:300px; height:250px;'>
+                        <script type='text/javascript'>
+                            googletag.display('div-gpt-ad-1350569504085-2');
+                        </script>
+                    </div>
+                    <!-- End DART Ad -->
+
+                </div>
+            
+<!--                <div class="featured-sidebar">-->
+<!---->
+<!--                    <h1>Featured on DZone</h1>-->
+<!--                    <ul>-->
+<!--                        <li><a href = "http://refcardz.dzone.com/refcardz/html5-new-standards-web-interactivity">HTML 5</a></li>-->
+<!--                        <li><a href = "http://refcardz.dzone.com/refcardz/corecss-part1">Core CSS: Part I</a></li>-->
+<!--                        <li><a href="http://library.dzone.com/assets/request/whitepaper/163303?oid=research_landing_page"><img src="http://dzone.com/sites/all/files/cloud-cover.png" width="150" border="0"></a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+
+            
+
+
+                <div id="top-refcardz" style="margin-bottom:15px;"></div>
+                <script language="javascript" type="text/javascript">
+                    document.addEventListener("DOMContentLoaded", function(){
+                        $('#top-refcardz').load('/sites/all/modules/dzone/assets/communities-top-refcardz.html');
+                    }, false);
+
+                </script>
+            
+                                    <style>
+    #snippets_popular{
+        margin: 0 0 15px 0;
+        font-size:14px;
+    }
+    #snippets_popular h2{
+        margin: 5px 0px;
+        padding: 5px 5px;
+        border-bottom: 2px solid #666;
+        font-family: "museoSans500","helvetica",Arial;
+        font-weight: bold;
+        font-size: 21px;
+        color: #666;
+    }
+
+    #snippets_popular ol{
+        margin-left:20px;
+    }
+
+    #snippets_popular li {
+        margin-bottom: 8px;
+    }
+</style>
+
+<div  id="snippets_popular"><h2>Popular Snippets</h2><ol><li><a href='snippets/how-change-lock-file-directory'>How to change lock file directory for paho mqtt client</a></li><li><a href='snippets/how-export-autocad-dxf'>How to Export AutoCAD DXF Drawings, Specific DXF Layouts or Layer to PDF using Java</a></li><li><a href='snippets/html-css-javascript-slider'>HTML, CSS & JavaScript - slider with text & button overlay.</a></li><li><a href='snippets/maven-compiler-arguments-xlint'>Maven compiler arguments -Xlint</a></li><li><a href='snippets/how-filter-email-messages'>How to Filter Email Messages from Exchange Mailbox inside Java Apps</a></li></ol></div>                
+                                        <div id="block-block-5" class="block block-block">
+
+  <div class="content">
+    <div id="sidebar_features"><h2 class="header">Spotlight Features</h2>				      	  	<div >
+	  		<a href="/click/179191/1" class="sidebar_image_link"><img src='http://cdn.dzone.com/sites/all/files/preview-images/October/dzr-square-logo.png'></a>
+	  		<h2><a href="/click/179191/1">Poll Results Are In: The World's Greatest Programmers</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/206123/1" class="sidebar_image_link"><img src='http://cdn.dzone.com/sites/all/files/preview-images/April/andrewphillips.jpg'></a>
+	  		<h2><a href="/click/206123/1">Dev of the Week: Andrew Phillips</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/189383/1" class="sidebar_image_link"><img src='http://cdn.dzone.com/sites/all/files/preview-images/January/networking1.jpg'></a>
+	  		<h2><a href="/click/189383/1">DevNexus Conference: Gearing up for DEVolution</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/202355/1" class="sidebar_image_link"><img src='http://cdn.dzone.com/sites/all/files/preview-images/March/golf_3.jpg'></a>
+	  		<h2><a href="/click/202355/1">Code Golf: Smile!</a></h2>
+	  	</div>
+              </div>  </div>
+</div>
+                    </div>
+        <!-- end of right sidebar -->
+    
+<!-- Cache the footer block -->
+<div id="footer"><span class="footer-header">Around the DZone Network</span><div class="large-topics-articles"><div class='featured-articles'><a href='http://architects.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Architects Zone']);">ARCHITECTS </span><a href ='http://architects.dzone.com/articles/big-data-beyond-mapreduce' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '131457-Top Posts of 2013: Big Data Beyond MapReduce: Google's Big Data Papers']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/February/photo_1.jpg);'></div><br>Top Posts of 2013: Big Data Beyond MapReduce: Goog...</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/principles-java-application' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130051-Top Posts of 2013: The Principles of Java Application Performance Tuning']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/February/java-logo-large.png);'></div><br>Top Posts of 2013: The Principles of Java Applicat...</a></div><div class='featured-articles'><a href='http://architects.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Architects Zone']);">ARCHITECTS </span><a href ='http://architects.dzone.com/articles/5-things-java-developer-should' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '131541-5 Things a Java Developer Should Consider This Year']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/February/Screen%20Shot%202013-02-18%20at%2011.41.12%20AM_4.png);'></div><br>5 Things a Java Developer Should Consider This Yea...</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/there-are-only-2-roles-code' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '134077-Top Posts of 2013: There Are Only 2 Roles of Code']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/March/Code_0.png);'></div><br>Top Posts of 2013: There Are Only 2 Roles of Code</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/singleton-design-pattern-–' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130325-Singleton Design Pattern – An Introspection w/ Best Practices']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/February/Design_Pattern_small_02.jpg);'></div><br>Singleton Design Pattern – An Introspection w/ B...</a></div><div class='featured-articles last-item'><a href='http://server.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Server Zone']);">SERVER </span><a href ='http://server.dzone.com/articles/best-best-practices-ever' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130499-Best Best Practices Ever']);"><div class='featured-image' style ='background-image:url(http://cdn.dzone.com/sites/all/files/preview-images/February/source%20code_3_2.jpg);'></div><br>Best Best Practices Ever</a></div></div><div class="hail_mary"><span class="block-title">You Might Also Like</span><ul class="footer-links"><li class='footer-links-item'><a href='http://server.dzone.com/articles/10-leading-html5-frameworks' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208421-10 Leading HTML5 Frameworks You'll Find Hard to Miss']);">10 Leading HTML5 Frameworks You'll Find Hard to Miss</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/mongolastic' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208673-Mongolastic']);">Mongolastic</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/yahoo-open-sources-their-mysql' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208975-Yahoo Open-Sources their MySQL Performance Analyzer']);">Yahoo Open-Sources their MySQL Performance Analyzer</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/20-years-java' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208897-20 Years Of Java: Share Your Own Java Story']);">20 Years Of Java: Share Your Own Java Story</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/devops-killing-maintenance' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '209183-DevOps is Killing Maintenance. Let's Celebrate. ']);">DevOps is Killing Maintenance. Let's Celebrate. </a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/mongodb-world-conference-scale' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '202089-MongoDB World Conference - Scale the Universe!']);">MongoDB World Conference - Scale the Universe!</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/what-done-really-looks-devops' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '209233-What Done REALLY Looks Like in DevOps']);">What Done REALLY Looks Like in DevOps</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/testing-angular-application' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208657-Testing an Angular Application: Angular JS and Spring Security Part VIII']);">Testing an Angular Application: Angular JS and Spring Security Part VIII</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/kanban-paradox' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208667-The Kanban Paradox']);">The Kanban Paradox</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/what-are-benefits-nodejs' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208461-What are the Benefits of Node.js?']);">What are the Benefits of Node.js?</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/teams-backlogs-working-tested' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '209241-Teams, Backlogs, Working Tested Software']);">Teams, Backlogs, Working Tested Software</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/three-waves-open-source' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208385- The Three Waves of Open Source Development']);"> The Three Waves of Open Source Development</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/mechanical-sympathy' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '209121-Mechanical Sympathy: Understanding the Hardware Makes You a Better Developer']);">Mechanical Sympathy: Understanding the Hardware Makes You a Better Developer</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/cloudcast-191-cloud-foundry' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '209329-The Cloudcast #191 - Cloud Foundry + Netflix OSS ']);">The Cloudcast #191 - Cloud Foundry + Netflix OSS </a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/getting-version-string-maven' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '208959-Getting Version String From a Maven-based Web Application']);">Getting Version String From a Maven-based Web Application</a></li></ul></div><div id="footer-articles"><div id="block-wrapper"><div id="left-block" class="footer-article-block"><span class="block-title">Popular on DZone</span><ul><li><a href = '/news/become-zone-leader' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '339-Become a Zone Leader and Get Recognized']);">Become a Zone Leader and Get Recognized</a></li><li><a href = '/news/lucene-revolution-2011-some-0' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '41381-Lucene Revolution 2011: Some post-conference links']);">Lucene Revolution 2011: Some post-conference links</a></li><li><a href = '/news/introduction-log-parser-studio' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '60787-Introduction to Log Parser Studio']);">Introduction to Log Parser Studio</a></li><li><a href = '/news/what-i-and-dont-about-devops' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '42791-What I like (and don't like) about DevOps']);">What I like (and don't like) about DevOps</a></li><li><a href = '/news/lucene-revolution-2011-some' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '41441-Lucene Revolution 2011: Some Post-Conference Links Part 2']);">Lucene Revolution 2011: Some Post-Conference Links Part 2</a></li><li><a href = '/news/gotchas-when-forcing-theme' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '36519-Gotchas when forcing the theme colour in a Windows Phone 7 app ']);">Gotchas when forcing the theme colour in a Windows Phone 7 app </a></li><li><a href = '/news/tethering-windows-phone-7' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '45767-Tethering Windows Phone 7 ']);">Tethering Windows Phone 7 </a></li><li><a href = '/news/dos-and-donts-first-use' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '47639-Dos and don'ts of first use experience ']);">Dos and don'ts of first use experience </a></li></ul></div><div id="middle-block" class="footer-article-block"><span class="block-title">Latest Articles</span><ul><li><a href ='/articles/how-you-frame-future-effects' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209733-How you frame the future effects how well you plan for it']);">How you frame the future effects how well you plan for it</a></li><li><a href ='/articles/hiding-behind-culture' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209731-Hiding behind culture']);">Hiding behind culture</a></li><li><a href ='/articles/how-social-networks-distort' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209727-How social networks distort the news']);">How social networks distort the news</a></li><li><a href ='/articles/news-roundup' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209725-News roundup']);">News roundup</a></li><li><a href ='/articles/smart-watch-aims-monitor' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209721-Smart watch aims to monitor productivity']);">Smart watch aims to monitor productivity</a></li><li><a href ='/articles/were-taking-bets-annotation' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209769-We're Taking Bets: This Annotation Will Soon Show up in the JDK']);">We're Taking Bets: This Annotation Will Soon Show up in the JDK</a></li><li><a href ='/articles/delta-analysis-teamscale' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209601-Delta Analysis with Teamscale']);">Delta Analysis with Teamscale</a></li><li><a href ='/articles/impulse-crafted-design' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '209781-Impulse: "Crafted Design"']);">Impulse: "Crafted Design"</a></li></ul></div></div></div><div id="right-block" class="footer-article-spotlight-block"><h2 class="block-title">Spotlight Resources</h2><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/couchbase-apis' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '176-Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET']);"><img border='0' style='float: left;' src='http://cdn.dzone.com/sites/all/modules/dzone/assets/refcardz/176/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/couchbase-apis'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '176-Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET']);">Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET</a></h3><div class="blurb" style="margin-left: 120px;"></div></div><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/essential-camel-components' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '170-Camel Essential Components']);"><img border='0' style='float: left;' src='http://cdn.dzone.com/sites/all/modules/dzone/assets/refcardz/170/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/essential-camel-components'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '170-Camel Essential Components']);">Camel Essential Components</a></h3><div class="blurb" style="margin-left: 120px;"><p>DZone's 170th Refcard is an essential reference to Camel, an open-source, lightweight, integration library.&nbsp; This Refcard is authored by...</div></div><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/dns' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '182-Practical DNS: Managing Domains for Safety, Reliability, and Speed']);"><img border='0' style='float: left;' src='http://cdn.dzone.com/sites/all/modules/dzone/assets/refcardz/182/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/dns'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '182-Practical DNS: Managing Domains for Safety, Reliability, and Speed']);">Practical DNS: Managing Domains for Safety, Reliability, and Speed</a></h3><div class="blurb" style="margin-left: 120px;"></div></div></div></div>
+<!-- end of footer -->
+</div>
+<!-- end of container -->
+</div>
+<!-- end of wrapper -->
+
+    <div class="subfooter fancyfont">
+        <div class="subfooter_center">
+            <div class="subfooter_top">
+                <div class="subfooter_logo">
+                </div>
+                <div class="subfooter_search">
+                    <form action="/search/google"  accept-charset="UTF-8" method="get" id="google-cse-searchbox-form-2">
+<div><input type="hidden" name="cx" id="edit-cx-2" value="010821965829155306098:ogyaz_5nsc8"  />
+<input type="hidden" name="cof" id="edit-cof-2" value="FORID:11"  />
+<div class="form-item" id="edit-query-2-wrapper">
+ <input type="text" maxlength="128" name="query" id="edit-query-2" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-sa-2" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-8704b70bec706f806ae540e70ea91f50" value="form-8704b70bec706f806ae540e70ea91f50"  />
+<input type="hidden" name="form_id" id="edit-google-cse-searchbox-form-2" value="google_cse_searchbox_form"  />
+
+</div></form>
+                </div>
+            </div>
+            <div>
+            </div>
+            <div class="subfooter_box">
+                <ul class="menu"><li class="expanded first"><a href="http://dzone.com" title="">DZone</a><ul class="menu"><li class="leaf first"><a href="http://refcardz.dzone.com/" title="">Refcardz</a></li>
+<li class="leaf"><a href="http://books.dzone.com/" title="">Book Reviews</a></li>
+<li class="leaf"><a href="http://library.dzone.com/" title="">Tech Library</a></li>
+<li class="leaf"><a href="http://itquestions.com/index.html" title="">IT Questions</a></li>
+<li class="leaf"><a href="http://snippets.dzone.com/" title="">Snippets</a></li>
+<li class="leaf"><a href="http://dzone.com/user" title="">My Profile</a></li>
+<li class="leaf"><a href="http://www.dzone.com/links/about.jsp" title="">About DZone</a></li>
+<li class="leaf"><a href="http://www.dzone.com/corporate/advertise" title="">Advertise</a></li>
+<li class="leaf"><a href="http://www.dzone.com/links/buttons.jsp" title="">Tools &amp; Buttons</a></li>
+<li class="leaf last"><a href="http://ask.dzone.com/index.html" title="">Send Feedback</a></li>
+</ul></li>
+<li class="expanded last"><a href="http://dzone.com/mz/html5" title="">Topics</a><ul class="menu"><li class="leaf first"><a href="http://dzone.com/mz/html5" title="">HTML5</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/windowsphone7" title="">Windows Phone</a></li>
+<li class="leaf"><a href="http://cloud.dzone.com/" title="">Cloud</a></li>
+<li class="leaf"><a href="http://mobile.dzone.com/" title="">Mobile</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/dotnet" title="">.NET</a></li>
+<li class="leaf"><a href="http://java.dzone.com/" title="">Java</a></li>
+<li class="leaf"><a href="http://php.dzone.com/" title="">PHP</a></li>
+<li class="leaf"><a href="http://eclipse.dzone.com/" title="">Eclipse</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/performance" title="">Performance</a></li>
+<li class="leaf"><a href="http://www.dzone.com/mz/big-data" title="">Big Data</a></li>
+<li class="leaf"><a href="http://agile.dzone.com/" title="">Agile</a></li>
+<li class="leaf last"><a href="http://dzone.com/mz/devops" title="">DevOps</a></li>
+</ul></li>
+</ul>
+                <ul class="menu">
+                    <li class="expanded follow-buttons">
+                        <a href="#">Follow Us</a>
+                        <ul class="menu">
+                            <li>
+                                                                                                            <a href="/rss.xml" class="subfooter-social subfooter-social-rss">RSS</a>
+                                                                                                </li>
+                            <li>
+                                <a href="https://plus.google.com/+dzone/posts" class="subfooter-social subfooter-social-google">Google +</a>
+                            </li>
+                            <li>
+                                <a href="http://www.facebook.com/pages/DZone/259639764711" class="subfooter-social subfooter-social-facebook">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="http://www.linkedin.com/groups/DZone-696877" class="subfooter-social subfooter-social-linkedin">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/#!/Dzone" class="subfooter-social subfooter-social-twitter">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="subfooter-right">
+
+                    "Starting from scratch" is seductive but disease ridden <br><span>-Pithy Advice for Programmers</span>
+
+                </div>
+
+
+            </div>
+            <div id="legal"><a href="/page/advertise">Advertising</a> - <a href="/page/tos">Terms of Service</a> - <a href="/page/privacy">Privacy</a> - © 1997-2014, DZone, Inc.</div>
+        </div>
+    </div>
+
+<!-- end of page wrapper -->
+</div>
+<script type="text/javascript" src="http://cdn.dzone.com/sites/all/files/js/js_3dff177b6f460bf15f7b05f244062378.js"></script>
+<script type="text/javascript" src="http://cdn.dzone.com/misc/jquery.form-3.18.js?1432917259"></script>
+<script type="text/javascript" src="http://cdn.dzone.com/sites/all/modules/sharebar/js/sharebar.js?1432917259"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"jstools":{"cleanurls":true,"basePath":"\/"},"activemenu":{"#block-book-0":"activemenu\/book","#block-menu-devel":"activemenu\/menu","#block-menu-menu-library-navigat":"activemenu\/menu","#block-menu-primary-links":"activemenu\/menu","#block-menu-secondary-links":"activemenu\/menu","#block-menu-menu-sections":"activemenu\/menu","#block-menu-menu-sitemap":"activemenu\/menu","#block-menu-menu-zones":"activemenu\/menu","#block-user-1":"activemenu\/menu"}});
+//--><!]]>
+</script>
+
+    <script type="text/javascript">
+        if(document.title.indexOf("Page not found") != 0){
+            $('.sharebar').sharebar({horizontal:'false',swidth:'75',minwidth:1100,position:'left',leftOffset:35,rightOffset:10});
+            $('#sharebar').css('display', 'none');
+            $(parent.document).scroll(function() {
+                var scroll_position =  $(window).scrollTop();
+                if(scroll_position > 350)
+                    $('#sharebar').fadeIn();
+                else
+                    $('#sharebar').fadeOut();
+            });}
+    </script>
+
+
+    <script type="text/javascript">
+        SyntaxHighlighter.config.bloggerMode = true;
+        SyntaxHighlighter.config.taName = "pre";
+        SyntaxHighlighter.config.clipboardSwf = '/sites/all/themes/dzone2012/scripts/syntaxHighlighter/clipboard.swf';
+        SyntaxHighlighter.all();
+        dp.SyntaxHighlighter.HighlightAll('code');
+    </script>
+
+
+<script type="text/javascript" src="/sites/all/files/js/js_c2984df839ce27a5040c451686381519.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"googleCSE":{"language":"en"}});
+//--><!]]>
+</script>
+
+<!--Track Microzones -->
+
+
+
+<!-- Social Tracking Scripts -->
+<script type="text/javascript">
+    fancyBoxOpen = false;
+
+    try {
+        if (FB && FB.Event && FB.Event.subscribe) {
+            FB.Event.subscribe('edge.create', function(targetUrl) {
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','Facebook', 'popup like']);
+//                    pageTracker._trackEvent('Facebook', 'popup like');
+                } else {
+                    _gaq.push(['_trackSocial', 'Facebook', 'like']);
+                }
+            });
+        }
+    } catch(e) {}
+
+    try {
+        $(window).ready(function() {
+            $('.IN-widget').click(function() {
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','LinkedIn', 'popup share']);
+//                    pageTracker._trackEvent('LinkedIn', 'popup share');
+                } else {
+                    _gaq.push(['_trackSocial','LinkedIn', 'share']);
+                }
+            });
+        });
+    } catch(e) {}
+
+    function track_plusone(gpovote) {
+        try {
+            if(fancyBoxOpen) {
+                _gaq.push(['_trackSocial','Google', 'popup +1']);
+//                pageTracker._trackEvent('Google', 'popup +1');
+            } else {
+                _gaq.push(['_trackSocial','Google', '+1']);
+            }
+        } catch (e) {}
+    }
+
+    try {
+        twttr.events.bind('tweet', function(event) {
+            if (event) {
+                var targetUrl;
+                if (event.target && event.target.nodeName == 'IFRAME') {
+                    targetUrl = extractParamFromUri(event.target.src, 'url');
+                }
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','Twitter', 'popup tweet']);
+//                    pageTracker._trackEvent('Twitter', 'popup tweet');
+                } else {
+                    _gaq.push(['_trackSocial','Twitter', 'tweet']);
+                }
+            }
+        });
+    } catch(e) {}
+
+    function extractParamFromUri(uri, paramName) {
+        if (!uri) {
+            return;
+        }
+        var uri = uri.split('#')[0];  // Remove anchor.
+        var parts = uri.split('?');  // Check for query params.
+        if (parts.length == 1) {
+            return;
+        }
+        var query = decodeURI(parts[1]);
+
+        // Find url param.
+        paramName += '=';
+        var params = query.split('&');
+        for (var i = 0, param; param = params[i]; ++i) {
+            if (param.indexOf(paramName) === 0) {
+                return unescape(param.split('=')[1]);
+            }
+        }
+    }
+
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!--<script type="text/javascript">-->
+<!--    adroll_adv_id = "NO2JQ7EYXFG5ZJIXRF2WHA";-->
+<!--    adroll_pix_id = "QIHSOEXCHZEH5BC2IZV6DJ";-->
+<!--    (function () {-->
+<!--        var oldonload = window.onload;-->
+<!--        window.onload = function(){-->
+<!--            __adroll_loaded=true;-->
+<!--            var scr = document.createElement("script");-->
+<!--            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");-->
+<!--            scr.setAttribute('async', 'true');-->
+<!--            scr.type = "text/javascript";-->
+<!--            scr.src = host + "/j/roundtrip.js";-->
+<!--            ((document.getElementsByTagName('head') || [null])[0] ||-->
+<!--                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);-->
+<!--            if(oldonload){oldonload()}};-->
+<!--    }());-->
+<!--</script>-->
+
+
+<!-- zones_interstitial_1x1 -->
+<div id='div-gpt-ad-1421439075930-0' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.display('div-gpt-ad-1421439075930-0');
+</script>
+</div>
+<!-- zones_interstitial_1x1 out-of-page -->
+<div id='div-gpt-ad-1421439075930-0-oop'>
+<script type='text/javascript'>
+googletag.display('div-gpt-ad-1421439075930-0-oop');
+</script>
+</div>
+
+</body>
+</html>

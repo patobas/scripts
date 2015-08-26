@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/etc/init.d/bacula-sd restart
+/etc/init.d/bacula-fd restart
+/etc/init.d/bacula-director restart

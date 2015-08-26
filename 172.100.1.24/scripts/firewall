@@ -1,0 +1,137 @@
+#!/bin/bash
+
+ipt='/sbin/iptables'
+renavpn=172.100.1.24
+
+printf '%b\n' '\033[32mFLUSH\033[39m'
+$ipt -F
+$ipt -t nat -F
+
+printf '%b\n' '\033[32mPOLITICA GRAL. CERRAMOS TODO. DEJAMOS ENTRAR y SALIR LO SOLICITADO\033[39m'
+$ipt -P INPUT DROP
+$ipt -P OUTPUT ACCEPT
+$ipt -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+$ipt -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+printf '%b\n' '\033[32mACEPTAMOS CONEXIONES!\033[39m'
+printf '%b\n' '\033[32mHABILITAMOS RANGO DE PUERTOS\033[39m'
+$ipt -I INPUT -s 192.168.0.0/16 -j ACCEPT
+$ipt -I INPUT -s 172.100.1.0/24 -j ACCEPT
+$ipt -I INPUT -s 10.7.0.0/24 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 22 -j ACCEPT
+$ipt -I INPUT -p udp --dport 22 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 80 -j ACCEPT
+$ipt -I INPUT -p udp --dport 80 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 111 -j ACCEPT
+$ipt -I INPUT -p udp --dport 111 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 1194 -j ACCEPT
+$ipt -A INPUT -p udp --dport 1194 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 5666 -j ACCEPT
+$ipt -A INPUT -p udp --dport 5666 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 7505 -j ACCEPT
+$ipt -A INPUT -p udp --dport 7505 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 9102 -j ACCEPT
+$ipt -A INPUT -p udp --dport 9102 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 10050 -j ACCEPT
+$ipt -A INPUT -p udp --dport 10050 -j ACCEPT
+
+#Enable icmp para la LAN
+$ipt -I INPUT -i eth0 -p icmp --icmp-type 8 -j ACCEPT
+
+printf '%b\n' '\033[32mFORWARDING!\033[39m'
+echo "1" > /proc/sys/net/ipv4/ip_forward
+$ipt -P FORWARD ACCEPT
+
+ipsetfw=`ipset list | grep Name | wc -l`
+if test $ipsetfw = "0" ; then
+
+BLOCKDB="block.txt"
+WORKDIR="/tmp"
+pwd=$(pwd)
+cd $WORKDIR
+#List of ips to block
+ipset --create blackips iphash
+## Obtain List of badguys from openbl.org
+wget -q -c --output-document=$BLOCKDB http://www.openbl.org/lists/base.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -Ev "^#" $BLOCKDB | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from ciarmy.com
+wget -q -c --output-document=$BLOCKDB http://www.ciarmy.com/list/ci-badguys.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -Ev "^#" $BLOCKDB | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from dshield.org
+wget -q -c --output-document=$BLOCKDB http://feeds.dshield.org/top10-2.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -f1 | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+#List of networks to block
+ipset --create blacknets nethash
+## Obtain List of badguys from dshield.org
+wget -q -c --output-document=$BLOCKDB http://feeds.dshield.org/block.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -f1,3 | sed "s/\t/\//g" | sort -u)
+    for i in $IPList
+    do
+        ipset --add blacknets $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from spamhaus.org
+    wget -q -c --output-document=$BLOCKDB http://www.spamhaus.org/drop/drop.lasso
+    if [ -f $BLOCKDB ]; then
+      IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -d" " -f1 | sort -u)
+      for i in $IPList
+      do
+        ipset --add blacknets $i
+      done
+    fi
+    rm $BLOCKDB
+#Drop blacklisted ips
+iptables -I INPUT -p tcp -m set --match-set blackips src -j DROP
+iptables -I INPUT -p udp -m set --match-set blackips src -j DROP
+iptables -I INPUT -p tcp -m set --match-set blacknets src -j DROP
+iptables -I INPUT -p udp -m set --match-set blacknets src -j DROP
+
+
+cd $pwd
+echo "IPSET OK!"
+
+ALLOW="allow.txt"
+## Obtener ips de Argentina
+    ipset --create argentina nethash
+    wget -q -c --output-document=$ALLOW http://www.ipdeny.com/ipblocks/data/countries/ar.zone
+	echo "" > ar.zone
+    if [ -f $ALLOW ]; then
+      IPList=$(grep -E "^[1-9]" $ALLOW | cut -d" " -f1 | sort -u)
+      for i in $IPList
+      do
+        ipset --add argentina $i
+      done
+    fi
+    rm $ALLOW
+iptables -I INPUT -p tcp -m set --match-set argentina src -j ACCEPT
+iptables -I INPUT -p udp -m set --match-set argentina src -j ACCEPT
+
+printf '%b\n' '\033[32mIPSET ARG OK!\033[39m'
+cd $pwd
+else
+printf '%b\n' '\033[32mIPSET BLOCKS OK!\033[39m'
+fi
+

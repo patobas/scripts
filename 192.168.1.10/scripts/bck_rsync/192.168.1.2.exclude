@@ -1,0 +1,4 @@
+/proc
+/var/pgdata/pg_afip
+/var/pgdata/pg_bck
+/sys

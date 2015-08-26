@@ -1,0 +1,42 @@
+#!/bin/bash
+
+MAILTO=root@renatea.gob.ar
+
+echo "En este script falta los espacios de 33 y 35 que estan apagados y de TS"
+echo "[192.168.1.1] Gate"
+ssh root@192.168.1.1 df -h
+echo ""
+
+echo "[192.168.1.2] Alfresco-Afip"
+ssh root@192.168.1.2 df -h 
+echo ""
+
+echo "[192.168.1.4] MailServer"
+df -h 
+echo ""
+
+echo "[192.168.1.5] Tramites"
+ssh root@192.168.1.5 df -h
+echo ""
+
+echo "[192.168.1.6] TSDev"
+ssh root@192.168.1.6 df -h
+echo ""
+
+echo "[192.168.1.8] Intranet"
+ssh root@192.168.1.8 df -h
+echo ""
+
+echo "[10.0.0.1] Afip-dbrena"
+ssh root@10.0.0.1 df -h
+echo ""
+
+#echo "[192.168.1.33] Intranet"
+#ssh root@192.168.1.33 df -h
+
+echo "[192.168.1.34] Poseidon"
+ssh root@192.168.1.34 df -h
+
+#echo "[192.168.1.35] Intranet"
+#ssh root@192.168.1.35 df -h
+
