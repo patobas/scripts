@@ -1,0 +1,296 @@
+#!/bin/bash
+
+
+ipt='/sbin/iptables'
+# limpio reglas 
+
+echo "FLUSH"
+$ipt -F
+$ipt -t nat -F
+echo "POLITICA GRAL. CERRAMOS TODO. DEJAMOS ENTRAR y SALIR LO SOLICITADO"
+#$ipt -P INPUT DROP
+#$ipt -P OUTPUT ACCEPT
+$ipt -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+$ipt -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+echo "DROP"
+$ipt -A INPUT -p tcp --dport 21 -j REJECT
+$ipt -A INPUT -p udp --dport 21 -j REJECT
+$ipt -A INPUT -p tcp --dport 23 -j REJECT
+$ipt -A INPUT -p udp --dport 23 -j REJECT
+$ipt -A INPUT -p tcp --dport 25 -j REJECT
+$ipt -A INPUT -p udp --dport 25 -j REJECT
+$ipt -A INPUT -p tcp --dport 111 -j REJECT
+$ipt -A INPUT -p udp --dport 111 -j REJECT
+$ipt -A INPUT -p tcp --dport 179 -j REJECT
+$ipt -A INPUT -p udp --dport 179 -j REJECT
+$ipt -A INPUT -p tcp --dport 554 -j REJECT
+$ipt -A INPUT -p udp --dport 554 -j REJECT
+$ipt -A INPUT -p tcp --dport 1337 -j REJECT #torrent-magnet
+$ipt -A INPUT -p udp --dport 1337 -j REJECT #torrent-magnet
+$ipt -A INPUT -p tcp --dport 1720 -j REJECT
+$ipt -A INPUT -p udp --dport 1720 -j REJECT
+$ipt -A INPUT -p tcp --dport 1755 -j REJECT
+$ipt -A INPUT -p udp --dport 1755 -j REJECT
+#$ipt -A INPUT -p tcp --dport 1194 -j REJECT
+#$ipt -A INPUT -p udp --dport 1194 -j REJECT
+$ipt -A INPUT -p tcp --dport 5389 -j REJECT
+$ipt -A INPUT -p udp --dport 5389 -j REJECT
+$ipt -A INPUT -p tcp --dport 5938 -j REJECT #teamviewer
+$ipt -A INPUT -p udp --dport 5938 -j REJECT #teamviewer
+$ipt -A INPUT -p tcp --dport 5631 -j REJECT #pcanywhere
+$ipt -A INPUT -p udp --dport 5631 -j REJECT #pcanywhere
+$ipt -A INPUT -p tcp --dport 6969 -j REJECT #torrent-magnet
+$ipt -A INPUT -p udp --dport 6969 -j REJECT #torrent-magnet
+$ipt -A INPUT -p tcp --dport 8080 -j REJECT
+$ipt -A INPUT -p udp --dport 8080 -j REJECT
+$ipt -A INPUT -p tcp --dport 1:10240 -j DROP
+$ipt -A INPUT -p udp --dport 1:10240 -j DROP
+
+$ipt -A INPUT -m mac --mac-source 00:80:e5:23:c3:16 -j DROP
+
+echo "PROTECCIONES"
+#echo "FUCK PING & SMURF ATTACK"
+#$ipt -A INPUT -p icmp -i eth1 -j LOG -m limit --log-prefix "iptables ping: "
+#echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+echo "FUCK BROADCAST & SMURF ATTACK"
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+
+echo "FUCK SPOOFING"
+# Para evitar el spoofing nos aseguramos de que la dirección
+# origen del paquete viene del sitio correcto."
+#for interface in /proc/sys/net/ipv4/conf/*/rp_filter; do
+#	echo "1" > ${interface}
+#done
+
+# Los ICMPs redirigidos que pueden alterar la tabla de rutas.
+#for interface in /proc/sys/net/ipv4/conf/*/accept_redirects; do
+#	echo "0" > ${interface}
+#done
+
+# No guardamos registros de los marcianos
+#echo "0" > /proc/sys/net/ipv4/conf/all/log_martians
+
+echo "FUCK CHICOS PILLOS y NMAP"
+#$ipt -A INPUT -m recent --rcheck --seconds 60 -m limit --limit 10/second -j LOG --log-prefix "iptables Pillos "
+#$ipt -A INPUT -m recent --update --seconds 60 -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,FIN FIN -j LOG --log-prefix "iptables FIN: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,FIN FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,PSH PSH -j LOG --log-prefix "iptables PSH: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,PSH PSH -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,URG URG -j LOG --log-prefix "iptables URG: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ACK,URG URG -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL ALL -j LOG --log-prefix "iptables XMAS scan: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL NONE -j LOG --log-prefix "iptables NULL scan: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j LOG --log-prefix "iptables pscan: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags SYN,FIN SYN,FIN -j LOG --log-prefix "iptables pscan 2: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags FIN,RST FIN,RST -j LOG --log-prefix "iptables pscan 2: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags FIN,RST FIN,RST -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL SYN,FIN -j LOG --log-prefix "iptables SYNFIN-SCAN: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL SYN,FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL URG,PSH,FIN -j LOG --log-prefix "iptables NMAP-XMAS-SCAN: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL URG,PSH,FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL FIN -j LOG --log-prefix "iptables FIN-SCAN: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL URG,PSH,SYN,FIN -j LOG --log-prefix "iptables NMAP-ID: "
+$ipt -t filter -A INPUT -p tcp --tcp-flags ALL URG,PSH,SYN,FIN -j DROP
+$ipt -t filter -A INPUT -p tcp --tcp-flags SYN,RST SYN,RST -j LOG --log-prefix "iptables SYN-RST: "
+# Drop all null packets
+$ipt -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+
+echo "LOCALHOST OK"
+$ipt -A INPUT -i lo -j ACCEPT
+
+echo "NFQUEUE"
+#$ipt -I INPUT -j NFQUEUE #--queue-balance 0:3
+#$ipt -I OUTPUT -j NFQUEUE #--queue-balance 0:3
+#$ipt -I FORWARD -j NFQUEUE #--queue-balance 0:3
+
+#$ipt -I INPUT -i eth0 -p icmp --icmp-type 8 -j ACCEPT
+#$ipt -I INPUT -i eth1 -p icmp --icmp-type 8 -j ACCEPT
+
+
+# Permitimos que la maquina pueda salir a la web
+$ipt -A INPUT -p tcp -m tcp --sport 80 -m state --state RELATED,ESTABLISHED -j ACCEPT
+$ipt -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+
+
+echo "HABILITAMOS RANGO DE PUERTOS"
+# habilito acceso a gate
+$ipt -I INPUT -s 192.168.0.0/16 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 443 -j ACCEPT
+$ipt -A INPUT -p udp --dport 443 -j ACCEPT
+
+# habilito dns
+$ipt -I INPUT -p tcp --dport 53 -j ACCEPT
+$ipt -I INPUT -p udp --dport 53 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 953 -j ACCEPT
+$ipt -I INPUT -p udp --dport 953 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 9084 -j ACCEPT 
+$ipt -I INPUT -p udp --dport 9084 -j ACCEPT
+
+# habilito Mailserver
+#$ipt -A INPUT -p tcp --dport 587 -j ACCEPT
+#$ipt -A INPUT -p udp --dport 587 -j ACCEPT
+#$ipt -A INPUT -p tcp --dport 993 -j ACCEPT
+#$ipt -A INPUT -p udp --dport 993 -j ACCEPT
+#$ipt -A INPUT -p tcp --dport 995 -j ACCEPT
+#$ipt -A INPUT -p udp --dport 995 -j ACCEPT
+
+# habilito zimbra-admin
+$ipt -A INPUT -p tcp --dport 7071 -j ACCEPT
+$ipt -A INPUT -p udp --dport 7071 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 9084 -j ACCEPT
+$ipt -A INPUT -p udp --dport 9084 -j ACCEPT
+
+#habilitar RDP
+#$ipt -I INPUT -p tcp -i eth1 --dport 3389 -j ACCEPT
+#$ipt -I INPUT -p udp -i eth1 --dport 3389 -j ACCEPT
+
+#habilito Bacula
+$ipt -I INPUT -p tcp --dport 9102 -j ACCEPT 
+$ipt -I INPUT -p udp --dport 9102 -j ACCEPT
+
+#=======================
+echo "FORWARDING"
+#----------------------
+echo "1" > /proc/sys/net/ipv4/ip_forward
+$ipt -P FORWARD ACCEPT
+
+# habilito acceso al proxy
+echo "PROXY"
+$ipt -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3128
+#=======================
+echo "PREROUTING"
+#----------------------
+
+
+# habilito http/https
+$ipt -I INPUT -i eth1 -p tcp --dport 80 -j ACCEPT
+$ipt -I INPUT -i eth1 -p udp --dport 80 -j ACCEPT
+$ipt -I INPUT -i eth1 -p tcp --dport 443 -j ACCEPT
+$ipt -I INPUT -i eth1 -p udp --dport 443 -j ACCEPT
+
+
+#PREROUTING PARA (INTRANET 443)
+#$ipt -t nat -A PREROUTING -p tcp -s 172.100.1.19 --dport 443 -j DNAT --to 192.168.1.18:443
+#$ipt -t nat -A PREROUTING -p tcp -s 192.168.5.0/24 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 172.100.1.24 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 10.7.0.0/24 --dport 443 -j DNAT --to 192.168.1.18:443
+
+#MINISTERIO DE TRABAJO
+
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.220 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.230 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.220 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.230 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.228.111.50 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.237 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.41.232.244 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.7 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.9 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.51.28.209 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.49.181.19 --dport 443 -j DNAT --to 192.168.1.18:443
+
+
+# RDP
+#$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 3389 -j DNAT --to 192.168.1.78:3389
+#$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 3389 -j DNAT --to 192.168.1.78:3389
+
+# Mailserver
+#$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 587 -j DNAT --to 192.168.1.4:587
+#$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 587 -j DNAT --to 192.168.1.4:587
+#$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 993 -j DNAT --to 192.168.1.4:993
+#$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 993 -j DNAT --to 192.168.1.4:993
+#$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 995 -j DNAT --to 192.168.1.4:995
+#$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 995 -j DNAT --to 192.168.1.4:995
+
+
+#PREROUTING ALFRESCO: $ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 443 -j DNAT --to 192.168.1.12:443
+
+# HABILITO SALIDA A INTERNET
+echo "POSTROUTING"
+$ipt -t nat -A POSTROUTING --out-interface eth0 -j MASQUERADE
+$ipt -t nat -I POSTROUTING -s 172.100.1.0/24 -d 192.168.1.18 -j MASQUERADE
+$ipt -t nat -I POSTROUTING -s 192.168.0.0/16 -j MASQUERADE #NO TOCAR!!!
+
+# Para habilitar log
+#$ipt -A INPUT -j LOG --log-prefix "iptables-input"
+#$ipt -A OUTPUT -j LOG --log-prefix "iptables-output"
+#$ipt -A FORWARD -j LOG --log-prefix "iptables-forward"
+#listado=`cat /var/data/repo/blacklists/* | grep -v ^# | grep -v ! | grep -v : | grep -v ^'$SOA' | grep -v 127.0.0.2`
+#for ip in $listado; do iptables -I INPUT -s $ip -j DROP; done
+
+ipsetfw=`ipset list | grep Name | wc -l`
+if test $ipsetfw = "0" ; then
+BLOCKDB="block.txt"
+WORKDIR="/tmp"
+pwd=$(pwd)
+cd $WORKDIR
+#List of ips to block
+ipset --create blackips iphash
+## Obtain List of badguys from openbl.org
+wget -q -c --output-document=$BLOCKDB http://www.openbl.org/lists/base.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -Ev "^#" $BLOCKDB | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from ciarmy.com
+wget -q -c --output-document=$BLOCKDB http://www.ciarmy.com/list/ci-badguys.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -Ev "^#" $BLOCKDB | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from dshield.org
+wget -q -c --output-document=$BLOCKDB http://feeds.dshield.org/top10-2.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -f1 | sort -u)
+    for i in $IPList
+    do
+        ipset --add blackips $i
+    done
+fi
+rm $BLOCKDB
+#List of networks to block
+ipset --create blacknets nethash
+## Obtain List of badguys from dshield.org
+wget -q -c --output-document=$BLOCKDB http://feeds.dshield.org/block.txt
+if [ -f $BLOCKDB ]; then
+    IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -f1,3 | sed "s/\t/\//g" | sort -u)
+    for i in $IPList
+    do
+        ipset --add blacknets $i
+    done
+fi
+rm $BLOCKDB
+## Obtain List of badguys from spamhaus.org
+    wget -q -c --output-document=$BLOCKDB http://www.spamhaus.org/drop/drop.lasso
+    if [ -f $BLOCKDB ]; then
+      IPList=$(grep -E "^[1-9]" $BLOCKDB | cut -d" " -f1 | sort -u)
+      for i in $IPList
+      do
+        ipset --add blacknets $i
+      done
+    fi
+    rm $BLOCKDB
+#Drop blacklisted ips
+ipset add blacknets 194.71.107.27
+iptables -A FORWARD -m set --match-set blackips src -j DROP
+iptables -A FORWARD -m set --match-set blacknets src -j DROP
+cd $pwd
+else
+echo "IPSET OK!"
+fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+mailto=root@renatea.gob.ar
+host=`hostname`
+log=/tmp/sarg_weekly
+/usr/sbin/sarg-reports weekly
+touch $log
+mutt -s "Sarg-Weekly [@$host]" $mailto < $log
+rm -rf $log

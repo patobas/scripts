@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#/sbin/route add -net 192.168.1.0/24 gw 172.100.1.1 dev eth2
+
+#eth2:1  inet addr:192.168.1.13  
+#Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+#default         192.168.1.60    0.0.0.0         UG    0      0        0 eth3
+#default         172.100.1.2     0.0.0.0         UG    0      0        0 eth2
+#localnet        *               255.255.255.0   U     0      0        0 eth2
+#192.168.1.0     *               255.255.255.0   U     0      0        0 eth3
+
+
+# Verificacion del gw y resolv
+gw=`/sbin/route | grep default | grep 172.100.1.2 | wc -l`
+resolv=`cat /etc/resolv.conf | grep nameserver | awk {'print $2'} `
+lock=/tmp/net.lock
+
+if test -f $lock ; then
+    echo "net.sh process is running?"
+    echo "$lock file exists"
+    exit
+else
+    echo "1" > $lock
+fi
+
+if test $gw = "0" ; then
+        printf '%b\n' '\033[31mAgrego default gw WG [172.100.1.2]!!!\033[39m'
+        sleep 1
+        /sbin/route add default gw 172.100.1.2 dev eth2
+	/sbin/route add -net 192.168.1.0/24 gw 172.100.1.1 dev eth2
+        sleep 1
+#        /sbin/route | grep default | grep eth2
+else
+        printf '%b\n' '\033[32mGW OK!\033[39m'
+        sleep 1
+#        /sbin/route | grep default | grep eth2
+fi
+
+if [ `ping www.google.com -c 1 | grep '1 received' | wc -l` = "1" ] ; then
+        printf '%b\n' '\033[32mInternet OK!\033[39m'
+        sleep 1
+else
+        printf '%b\n' '\033[31mERROR! PISAMOS EL RESOLV!!!\033[39m'
+        echo "." | mail -s "Suricata ADD GW" root@renatea.gob.ar
+        echo "search renatea.gob.ar" > /etc/resolv.conf
+        echo "nameserver 192.168.1.11" >> /etc/resolv.conf
+        echo "nameserver 186.33.224.10" >> /etc/resolv.conf
+        echo "nameserver 192.168.1.1" >> /etc/resolv.conf
+        echo "nameserver 156.154.70.1" >> /etc/resolv.conf
+        cat /etc/resolv.conf
+fi
+
+rm -rf $lock

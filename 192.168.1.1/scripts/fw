@@ -1,0 +1,150 @@
+#!/bin/bash
+
+
+ipt='/sbin/iptables'
+# limpio reglas 
+
+echo "FLUSH"
+$ipt -F
+$ipt -t nat -F
+
+echo "LOCALHOST OK"
+$ipt -A INPUT -i lo -j ACCEPT
+
+echo "NFQUEUE"
+#$ipt -I INPUT -j NFQUEUE
+#$ipt -I OUTPUT -j NFQUEUE
+#$ipt -I FORWARD -j NFQUEUE
+
+$ipt -I INPUT -i eth0 -p icmp --icmp-type 8 -j ACCEPT
+$ipt -I INPUT -i eth1 -p icmp --icmp-type 8 -j ACCEPT
+
+
+# Permitimos que la maquina pueda salir a la web
+$ipt -A INPUT -p tcp -m tcp --sport 80 -m state --state RELATED,ESTABLISHED -j ACCEPT
+$ipt -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+
+
+echo "HABILITAMOS RANGO DE PUERTOS"
+# habilito acceso a gate
+$ipt -I INPUT -s 192.168.0.0/16 -j ACCEPT
+
+# habilito dns
+$ipt -I INPUT -p tcp --dport 53 -j ACCEPT
+$ipt -I INPUT -p udp --dport 53 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 953 -j ACCEPT
+$ipt -I INPUT -p udp --dport 953 -j ACCEPT
+$ipt -I INPUT -p tcp --dport 9084 -j ACCEPT 
+$ipt -I INPUT -p udp --dport 9084 -j ACCEPT
+
+# habilito Mailserver
+$ipt -A INPUT -p tcp --dport 25 -j ACCEPT
+$ipt -A INPUT -p udp --dport 25 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 143 -j ACCEPT
+$ipt -A INPUT -p udp --dport 143 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 443 -j ACCEPT
+$ipt -A INPUT -p udp --dport 443 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 587 -j ACCEPT
+$ipt -A INPUT -p udp --dport 587 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 993 -j ACCEPT
+$ipt -A INPUT -p udp --dport 993 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 995 -j ACCEPT
+$ipt -A INPUT -p udp --dport 995 -j ACCEPT
+
+# habilito zimbra-admin
+$ipt -A INPUT -p tcp --dport 7071 -j ACCEPT
+$ipt -A INPUT -p udp --dport 7071 -j ACCEPT
+$ipt -A INPUT -p tcp --dport 9084 -j ACCEPT
+$ipt -A INPUT -p udp --dport 9084 -j ACCEPT
+
+
+
+#RDP
+#$ipt -I INPUT -p udp -i eth1 --dport 3389 -j ACCEPT
+#$ipt -I INPUT -p tcp -i eth1 --dport 3389 -j ACCEPT
+#$ipt -I INPUT -p tcp -i eth1 --dport 3390 -j ACCEPT
+#$ipt -I INPUT -p udp -i eth1 --dport 3390 -j ACCEPT
+
+
+#=======================
+echo "FORWARDING"
+#----------------------
+echo "1" > /proc/sys/net/ipv4/ip_forward
+$ipt -P FORWARD ACCEPT
+
+# habilito acceso al proxy
+echo "PROXY"
+$ipt -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3128
+#=======================
+echo "PREROUTING"
+#----------------------
+
+
+# habilito http/https
+$ipt -I INPUT -i eth1 -p tcp --dport 80 -j ACCEPT
+$ipt -I INPUT -i eth1 -p udp --dport 80 -j ACCEPT
+$ipt -I INPUT -i eth1 -p tcp --dport 443 -j ACCEPT
+$ipt -I INPUT -i eth1 -p udp --dport 443 -j ACCEPT
+
+
+#PREROUTING PARA (INTRANET 443)
+$ipt -t nat -A PREROUTING -p tcp -s 172.100.1.19 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 192.168.5.0/24 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 172.100.1.24 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 10.7.0.0/24 --dport 443 -j DNAT --to 192.168.1.18:443
+
+#MINISTERIO DE TRABAJO
+
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.220 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.230 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.220 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.230 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.228.111.50 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.47.52.237 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.41.232.244 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.7 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 200.1.113.9 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.51.28.209 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 190.49.181.19 --dport 443 -j DNAT --to 192.168.1.18:443
+$ipt -t nat -A PREROUTING -p tcp -s 186.125.129.241 --dport 443 -j DNAT --to 192.168.1.18:443
+
+
+# RDP
+#$ipt -t nat -A PREROUTING -p tcp -i eth0 --dport 3390 -j DNAT --to 192.168.1.59:3390
+#$ipt -t nat -A PREROUTING -p udp -i eth0 --dport 3390 -j DNAT --to 192.168.1.59:3390
+
+#$ipt -t nat -A PREROUTING -p tcp -i eth0 --dport 53 -j DNAT --to 192.168.1.13:53
+#$ipt -t nat -A PREROUTING -p udp -i eth0 --dport 53 -j DNAT --to 192.168.1.13:53
+
+# Mailserver
+$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 25 -j DNAT --to 192.168.1.4:25
+$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 25 -j DNAT --to 192.168.1.4:25
+$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 143 -j DNAT --to 192.168.1.4:143
+$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 143 -j DNAT --to 192.168.1.4:143
+$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 587 -j DNAT --to 192.168.1.4:587
+$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 587 -j DNAT --to 192.168.1.4:587
+$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 993 -j DNAT --to 192.168.1.4:993
+$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 993 -j DNAT --to 192.168.1.4:993
+$ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 995 -j DNAT --to 192.168.1.4:995
+$ipt -t nat -A PREROUTING -p udp -i eth1 --dport 995 -j DNAT --to 192.168.1.4:995
+
+
+
+
+
+
+
+#PREROUTING ALFRESCO: $ipt -t nat -A PREROUTING -p tcp -i eth1 --dport 443 -j DNAT --to 192.168.1.12:443
+
+
+# HABILITO SALIDA A INTERNET
+echo "POSTROUTING"
+$ipt -t nat -A POSTROUTING --out-interface eth0 -j MASQUERADE
+$ipt -t nat -I POSTROUTING -s 172.100.1.0/24 -d 192.168.1.18 -j MASQUERADE
+$ipt -t nat -I POSTROUTING -s 192.168.0.0/16 -j MASQUERADE 
+
+$ipt -A INPUT -j LOG --log-prefix "iptables-input"
+$ipt -A OUTPUT -j LOG --log-prefix "iptables-output"
+$ipt -A FORWARD -j LOG --log-prefix "iptables-forward"
+
+

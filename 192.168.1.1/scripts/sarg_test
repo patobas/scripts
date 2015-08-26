@@ -1,0 +1,9 @@
+######FILE######
+#!/bin/sh
+exec /usr/bin/sarg \
+        -f /etc/squid/sarg-reports.conf \
+        -l /var/log/squid/access.log \
+        -o /var/www/squid-reports \
+        -d "$(date --date "2 day ago")" > /dev/null 2>&1
+exit 0
+######END FILE######

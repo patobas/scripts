@@ -1,0 +1,2 @@
+#!/bin/bash
+route add -net 192.168.5.0 gw 172.100.1.19 netmask 255.255.255.0 dev eth1

@@ -1,0 +1,5 @@
+#/bin/bash
+## Sincronizamos la configuración y usuarios de samba
+rsync -avz /etc/samba/* root@192.168.1.1:/etc/samba/
+rsync -avz /etc/passwd root@192.168.1.1:/etc/passwd
+

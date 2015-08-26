@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Get current date
+TODAY=$(date +%d/%m/%Y)
+
+#Get yesterday's date
+YESTERDAY=$(date --date yesterday +%d/%m/%Y)
+
+
+/usr/bin/sarg -z -d $YESTERDAY-$TODAY > /dev/null 2>&1
+
+exit 0

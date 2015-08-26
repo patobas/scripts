@@ -1,0 +1,9 @@
+Modo arácnido activado. Comprobar si el fichero remoto existe.
+--2014-06-09 19:53:09--  http://www.renatea.gob.ar/
+Resolviendo www.renatea.gob.ar (www.renatea.gob.ar)... 192.168.1.17
+Conectando con www.renatea.gob.ar (www.renatea.gob.ar)[192.168.1.17]:80... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: no especificado [text/html]
+El fichero remoto existe y podría contener todavía más enlaces,
+pero la recursión está desactivada -- no se recupera.
+

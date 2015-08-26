@@ -1,0 +1,9 @@
+#!/bin/sh
+mailto=root@renatea.gob.ar
+host=`hostname`
+log=/tmp/sarg_monthly
+/usr/sbin/sarg-reports monthly
+touch $log
+du -hs /var/data/sarg/Monthly/2015Apr01-2015Apr30/
+mutt -s "Sarg-Monthly [@$host]" $mailto < $log
+rm -rf $log

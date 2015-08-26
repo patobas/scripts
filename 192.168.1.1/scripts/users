@@ -1,0 +1,479 @@
+#!/bin/bash
+echo ""
+pdbedit -Lv aanderson | grep 'Unix username:'
+pdbedit -Lv aanderson | grep 'Password must change'
+echo ""
+pdbedit -Lv aastesiano | grep 'Unix username:'
+pdbedit -Lv aastesiano | grep 'Password must change'
+echo ""
+pdbedit -Lv abrondo | grep 'Unix username:'
+pdbedit -Lv abrondo | grep 'Password must change'
+echo ""
+pdbedit -Lv acasanovas | grep 'Unix username:'
+pdbedit -Lv acasanovas | grep 'Password must change'
+echo ""
+pdbedit -Lv adecchi | grep 'Unix username:'
+pdbedit -Lv adecchi | grep 'Password must change'
+echo ""
+pdbedit -Lv admin | grep 'Unix username:'
+pdbedit -Lv admin | grep 'Password must change'
+echo ""
+pdbedit -Lv administrador | grep 'Unix username:'
+pdbedit -Lv administrador | grep 'Password must change'
+echo ""
+pdbedit -Lv aguerrieri | grep 'Unix username:'
+pdbedit -Lv aguerrieri | grep 'Password must change'
+echo ""
+pdbedit -Lv ahernandez | grep 'Unix username:'
+pdbedit -Lv ahernandez | grep 'Password must change'
+echo ""
+pdbedit -Lv ajungblut | grep 'Unix username:'
+pdbedit -Lv ajungblut | grep 'Password must change'
+echo ""
+pdbedit -Lv alanza | grep 'Unix username:'
+pdbedit -Lv alanza | grep 'Password must change'
+echo ""
+pdbedit -Lv allanos | grep 'Unix username:'
+pdbedit -Lv allanos | grep 'Password must change'
+echo ""
+pdbedit -Lv amaculus | grep 'Unix username:'
+pdbedit -Lv amaculus | grep 'Password must change'
+echo ""
+pdbedit -Lv amenon | grep 'Unix username:'
+pdbedit -Lv amenon | grep 'Password must change'
+echo ""
+pdbedit -Lv aquarleri | grep 'Unix username:'
+pdbedit -Lv aquarleri | grep 'Password must change'
+echo ""
+pdbedit -Lv aresa | grep 'Unix username:'
+pdbedit -Lv aresa | grep 'Password must change'
+echo ""
+pdbedit -Lv arobiz | grep 'Unix username:'
+pdbedit -Lv arobiz | grep 'Password must change'
+echo ""
+pdbedit -Lv auditores | grep 'Unix username:'
+pdbedit -Lv auditores | grep 'Password must change'
+echo ""
+pdbedit -Lv baraoz | grep 'Unix username:'
+pdbedit -Lv baraoz | grep 'Password must change'
+echo ""
+pdbedit -Lv blynch | grep 'Unix username:'
+pdbedit -Lv blynch | grep 'Password must change'
+echo ""
+pdbedit -Lv bufor | grep 'Unix username:'
+pdbedit -Lv bufor | grep 'Password must change'
+echo ""
+pdbedit -Lv ccasey | grep 'Unix username:'
+pdbedit -Lv ccasey | grep 'Password must change'
+echo ""
+pdbedit -Lv ccayzac | grep 'Unix username:'
+pdbedit -Lv ccayzac | grep 'Password must change'
+echo ""
+pdbedit -Lv cchavano | grep 'Unix username:'
+pdbedit -Lv cchavano | grep 'Password must change'
+echo ""
+pdbedit -Lv cfilace | grep 'Unix username:'
+pdbedit -Lv cfilace | grep 'Password must change'
+echo ""
+pdbedit -Lv cllanos | grep 'Unix username:'
+pdbedit -Lv cllanos | grep 'Password must change'
+echo ""
+pdbedit -Lv cmuchut | grep 'Unix username:'
+pdbedit -Lv cmuchut | grep 'Password must change'
+echo ""
+pdbedit -Lv dferreyra | grep 'Unix username:'
+pdbedit -Lv dferreyra | grep 'Password must change'
+echo ""
+pdbedit -Lv dgarcia | grep 'Unix username:'
+pdbedit -Lv dgarcia | grep 'Password must change'
+echo ""
+pdbedit -Lv dmichelotti | grep 'Unix username:'
+pdbedit -Lv dmichelotti | grep 'Password must change'
+echo ""
+pdbedit -Lv dpini | grep 'Unix username:'
+pdbedit -Lv dpini | grep 'Password must change'
+echo ""
+pdbedit -Lv dserralta | grep 'Unix username:'
+pdbedit -Lv dserralta | grep 'Password must change'
+echo ""
+pdbedit -Lv eabib | grep 'Unix username:'
+pdbedit -Lv eabib | grep 'Password must change'
+echo ""
+pdbedit -Lv eayala | grep 'Unix username:'
+pdbedit -Lv eayala | grep 'Password must change'
+echo ""
+pdbedit -Lv ecaruso | grep 'Unix username:'
+pdbedit -Lv ecaruso | grep 'Password must change'
+echo ""
+pdbedit -Lv efigueiras | grep 'Unix username:'
+pdbedit -Lv efigueiras | grep 'Password must change'
+echo ""
+pdbedit -Lv epodesta | grep 'Unix username:'
+pdbedit -Lv epodesta | grep 'Password must change'
+echo ""
+pdbedit -Lv eramirez | grep 'Unix username:'
+pdbedit -Lv eramirez | grep 'Password must change'
+echo ""
+pdbedit -Lv esebastiano | grep 'Unix username:'
+pdbedit -Lv esebastiano | grep 'Password must change'
+echo ""
+pdbedit -Lv etorrens | grep 'Unix username:'
+pdbedit -Lv etorrens | grep 'Password must change'
+echo ""
+pdbedit -Lv eutrera | grep 'Unix username:'
+pdbedit -Lv eutrera | grep 'Password must change'
+echo ""
+pdbedit -Lv ezecler | grep 'Unix username:'
+pdbedit -Lv ezecler | grep 'Password must change'
+echo ""
+pdbedit -Lv fasseff | grep 'Unix username:'
+pdbedit -Lv fasseff | grep 'Password must change'
+echo ""
+pdbedit -Lv fcastro | grep 'Unix username:'
+pdbedit -Lv fcastro | grep 'Password must change'
+echo ""
+pdbedit -Lv fdominguez | grep 'Unix username:'
+pdbedit -Lv fdominguez | grep 'Password must change'
+echo ""
+pdbedit -Lv fguana | grep 'Unix username:'
+pdbedit -Lv fguana | grep 'Password must change'
+echo ""
+pdbedit -Lv flemos | grep 'Unix username:'
+pdbedit -Lv flemos | grep 'Password must change'
+echo ""
+pdbedit -Lv flistorti | grep 'Unix username:'
+pdbedit -Lv flistorti | grep 'Password must change'
+echo ""
+pdbedit -Lv fruiz | grep 'Unix username:'
+pdbedit -Lv fruiz | grep 'Password must change'
+echo ""
+pdbedit -Lv fteseo | grep 'Unix username:'
+pdbedit -Lv fteseo | grep 'Password must change'
+echo ""
+pdbedit -Lv ftorres | grep 'Unix username:'
+pdbedit -Lv ftorres | grep 'Password must change'
+echo ""
+pdbedit -Lv gbuisart | grep 'Unix username:'
+pdbedit -Lv gbuisart | grep 'Password must change'
+echo ""
+pdbedit -Lv gfranco | grep 'Unix username:'
+pdbedit -Lv gfranco | grep 'Password must change'
+echo ""
+pdbedit -Lv gfuentes | grep 'Unix username:'
+pdbedit -Lv gfuentes | grep 'Password must change'
+echo ""
+pdbedit -Lv ggiannasi | grep 'Unix username:'
+pdbedit -Lv ggiannasi | grep 'Password must change'
+echo ""
+pdbedit -Lv ggmamelucco | grep 'Unix username:'
+pdbedit -Lv ggmamelucco | grep 'Password must change'
+echo ""
+pdbedit -Lv glorizzo | grep 'Unix username:'
+pdbedit -Lv glorizzo | grep 'Password must change'
+echo ""
+pdbedit -Lv gmamelucco | grep 'Unix username:'
+pdbedit -Lv gmamelucco | grep 'Password must change'
+echo ""
+pdbedit -Lv gmendez | grep 'Unix username:'
+pdbedit -Lv gmendez | grep 'Password must change'
+echo ""
+pdbedit -Lv gsfasciotti | grep 'Unix username:'
+pdbedit -Lv gsfasciotti | grep 'Password must change'
+echo ""
+pdbedit -Lv gvenegas | grep 'Unix username:'
+pdbedit -Lv gvenegas | grep 'Password must change'
+echo ""
+pdbedit -Lv hmonzon | grep 'Unix username:'
+pdbedit -Lv hmonzon | grep 'Password must change'
+echo ""
+pdbedit -Lv hzorzon | grep 'Unix username:'
+pdbedit -Lv hzorzon | grep 'Password must change'
+echo ""
+pdbedit -Lv ialarcon | grep 'Unix username:'
+pdbedit -Lv ialarcon | grep 'Password must change'
+echo ""
+pdbedit -Lv icorral | grep 'Unix username:'
+pdbedit -Lv icorral | grep 'Password must change'
+echo ""
+pdbedit -Lv inforenatre | grep 'Unix username:'
+pdbedit -Lv inforenatre | grep 'Password must change'
+echo ""
+pdbedit -Lv ipenna | grep 'Unix username:'
+pdbedit -Lv ipenna | grep 'Password must change'
+echo ""
+pdbedit -Lv iraiteri | grep 'Unix username:'
+pdbedit -Lv iraiteri | grep 'Password must change'
+echo ""
+pdbedit -Lv irivas | grep 'Unix username:'
+pdbedit -Lv irivas | grep 'Password must change'
+echo ""
+pdbedit -Lv jalvarez | grep 'Unix username:'
+pdbedit -Lv jalvarez | grep 'Password must change'
+echo ""
+pdbedit -Lv jaraujo | grep 'Unix username:'
+pdbedit -Lv jaraujo | grep 'Password must change'
+echo ""
+pdbedit -Lv jesica | grep 'Unix username:'
+pdbedit -Lv jesica | grep 'Password must change'
+echo ""
+pdbedit -Lv jespil | grep 'Unix username:'
+pdbedit -Lv jespil | grep 'Password must change'
+echo ""
+pdbedit -Lv jfunari | grep 'Unix username:'
+pdbedit -Lv jfunari | grep 'Password must change'
+echo ""
+pdbedit -Lv jglopez | grep 'Unix username:'
+pdbedit -Lv jglopez | grep 'Password must change'
+echo ""
+pdbedit -Lv jgodoy | grep 'Unix username:'
+pdbedit -Lv jgodoy | grep 'Password must change'
+echo ""
+pdbedit -Lv jibalo | grep 'Unix username:'
+pdbedit -Lv jibalo | grep 'Password must change'
+echo ""
+pdbedit -Lv jlasa | grep 'Unix username:'
+pdbedit -Lv jlasa | grep 'Password must change'
+echo ""
+pdbedit -Lv jmarengo | grep 'Unix username:'
+pdbedit -Lv jmarengo | grep 'Password must change'
+echo ""
+pdbedit -Lv jmarino | grep 'Unix username:'
+pdbedit -Lv jmarino | grep 'Password must change'
+echo ""
+pdbedit -Lv jrampoldi | grep 'Unix username:'
+pdbedit -Lv jrampoldi | grep 'Password must change'
+echo ""
+pdbedit -Lv jsalas | grep 'Unix username:'
+pdbedit -Lv jsalas | grep 'Password must change'
+echo ""
+pdbedit -Lv jtoledo | grep 'Unix username:'
+pdbedit -Lv jtoledo | grep 'Password must change'
+echo ""
+pdbedit -Lv kprat | grep 'Unix username:'
+pdbedit -Lv kprat | grep 'Password must change'
+echo ""
+pdbedit -Lv ldaquino | grep 'Unix username:'
+pdbedit -Lv ldaquino | grep 'Password must change'
+echo ""
+pdbedit -Lv lfernandez | grep 'Unix username:'
+pdbedit -Lv lfernandez | grep 'Password must change'
+echo ""
+pdbedit -Lv lflores | grep 'Unix username:'
+pdbedit -Lv lflores | grep 'Password must change'
+echo ""
+pdbedit -Lv lginestet | grep 'Unix username:'
+pdbedit -Lv lginestet | grep 'Password must change'
+echo ""
+pdbedit -Lv lgomez | grep 'Unix username:'
+pdbedit -Lv lgomez | grep 'Password must change'
+echo ""
+pdbedit -Lv libreta | grep 'Unix username:'
+pdbedit -Lv libreta | grep 'Password must change'
+echo ""
+pdbedit -Lv lmarengo | grep 'Unix username:'
+pdbedit -Lv lmarengo | grep 'Password must change'
+echo ""
+pdbedit -Lv lnfranco | grep 'Unix username:'
+pdbedit -Lv lnfranco | grep 'Password must change'
+echo ""
+pdbedit -Lv lpasti | grep 'Unix username:'
+pdbedit -Lv lpasti | grep 'Password must change'
+echo ""
+pdbedit -Lv malianello | grep 'Unix username:'
+pdbedit -Lv malianello | grep 'Password must change'
+echo ""
+pdbedit -Lv masanchez | grep 'Unix username:'
+pdbedit -Lv masanchez | grep 'Password must change'
+echo ""
+pdbedit -Lv mbruce | grep 'Unix username:'
+pdbedit -Lv mbruce | grep 'Password must change'
+echo ""
+pdbedit -Lv mcaratori | grep 'Unix username:'
+pdbedit -Lv mcaratori | grep 'Password must change'
+echo ""
+pdbedit -Lv mcorapi | grep 'Unix username:'
+pdbedit -Lv mcorapi | grep 'Password must change'
+echo ""
+pdbedit -Lv mcordoba | grep 'Unix username:'
+pdbedit -Lv mcordoba | grep 'Password must change'
+echo ""
+pdbedit -Lv mcrotto | grep 'Unix username:'
+pdbedit -Lv mcrotto | grep 'Password must change'
+echo ""
+pdbedit -Lv mdangelo | grep 'Unix username:'
+pdbedit -Lv mdangelo | grep 'Password must change'
+echo ""
+pdbedit -Lv mdietrich | grep 'Unix username:'
+pdbedit -Lv mdietrich | grep 'Password must change'
+echo ""
+pdbedit -Lv mfarias | grep 'Unix username:'
+pdbedit -Lv mfarias | grep 'Password must change'
+echo ""
+pdbedit -Lv mfasciolo | grep 'Unix username:'
+pdbedit -Lv mfasciolo | grep 'Password must change'
+echo ""
+pdbedit -Lv mfernandez | grep 'Unix username:'
+pdbedit -Lv mfernandez | grep 'Password must change'
+echo ""
+pdbedit -Lv mgarcia | grep 'Unix username:'
+pdbedit -Lv mgarcia | grep 'Password must change'
+echo ""
+pdbedit -Lv mgiraudo | grep 'Unix username:'
+pdbedit -Lv mgiraudo | grep 'Password must change'
+echo ""
+pdbedit -Lv mhatamleh | grep 'Unix username:'
+pdbedit -Lv mhatamleh | grep 'Password must change'
+echo ""
+pdbedit -Lv mizaguirre | grep 'Unix username:'
+pdbedit -Lv mizaguirre | grep 'Password must change'
+echo ""
+pdbedit -Lv mlemos | grep 'Unix username:'
+pdbedit -Lv mlemos | grep 'Password must change'
+echo ""
+pdbedit -Lv mmercuri | grep 'Unix username:'
+pdbedit -Lv mmercuri | grep 'Password must change'
+echo ""
+pdbedit -Lv mmiralles | grep 'Unix username:'
+pdbedit -Lv mmiralles | grep 'Password must change'
+echo ""
+pdbedit -Lv mmorales | grep 'Unix username:'
+pdbedit -Lv mmorales | grep 'Password must change'
+echo ""
+pdbedit -Lv mroldan | grep 'Unix username:'
+pdbedit -Lv mroldan | grep 'Password must change'
+echo ""
+pdbedit -Lv mtisnes | grep 'Unix username:'
+pdbedit -Lv mtisnes | grep 'Password must change'
+echo ""
+pdbedit -Lv mzavalia | grep 'Unix username:'
+pdbedit -Lv mzavalia | grep 'Password must change'
+echo ""
+pdbedit -Lv nalvarez | grep 'Unix username:'
+pdbedit -Lv nalvarez | grep 'Password must change'
+echo ""
+pdbedit -Lv ncgomez | grep 'Unix username:'
+pdbedit -Lv ncgomez | grep 'Password must change'
+echo ""
+pdbedit -Lv ngomez | grep 'Unix username:'
+pdbedit -Lv ngomez | grep 'Password must change'
+echo ""
+pdbedit -Lv nslatman | grep 'Unix username:'
+pdbedit -Lv nslatman | grep 'Password must change'
+echo ""
+pdbedit -Lv nsolla | grep 'Unix username:'
+pdbedit -Lv nsolla | grep 'Password must change'
+echo ""
+pdbedit -Lv nzetzsche | grep 'Unix username:'
+pdbedit -Lv nzetzsche | grep 'Password must change'
+echo ""
+pdbedit -Lv oceriotti | grep 'Unix username:'
+pdbedit -Lv oceriotti | grep 'Password must change'
+echo ""
+pdbedit -Lv pansio | grep 'Unix username:'
+pdbedit -Lv pansio | grep 'Password must change'
+echo ""
+pdbedit -Lv pasantes1 | grep 'Unix username:'
+pdbedit -Lv pasantes1 | grep 'Password must change'
+echo ""
+pdbedit -Lv pasantes2 | grep 'Unix username:'
+pdbedit -Lv pasantes2 | grep 'Password must change'
+echo ""
+pdbedit -Lv pasantes3 | grep 'Unix username:'
+pdbedit -Lv pasantes3 | grep 'Password must change'
+echo ""
+pdbedit -Lv pasantes | grep 'Unix username:'
+pdbedit -Lv pasantes | grep 'Password must change'
+echo ""
+pdbedit -Lv pato | grep 'Unix username:'
+pdbedit -Lv pato | grep 'Password must change'
+echo ""
+pdbedit -Lv pbasalo | grep 'Unix username:'
+pdbedit -Lv pbasalo | grep 'Password must change'
+echo ""
+pdbedit -Lv pcolazo | grep 'Unix username:'
+pdbedit -Lv pcolazo | grep 'Password must change'
+echo ""
+pdbedit -Lv pdelcastello | grep 'Unix username:'
+pdbedit -Lv pdelcastello | grep 'Password must change'
+echo ""
+pdbedit -Lv pdiaz | grep 'Unix username:'
+pdbedit -Lv pdiaz | grep 'Password must change'
+echo ""
+pdbedit -Lv pgorsolini | grep 'Unix username:'
+pdbedit -Lv pgorsolini | grep 'Password must change'
+echo ""
+pdbedit -Lv pleanza | grep 'Unix username:'
+pdbedit -Lv pleanza | grep 'Password must change'
+echo ""
+pdbedit -Lv porsolini | grep 'Unix username:'
+pdbedit -Lv porsolini | grep 'Password must change'
+echo ""
+pdbedit -Lv ptaddei | grep 'Unix username:'
+pdbedit -Lv ptaddei | grep 'Password must change'
+echo ""
+pdbedit -Lv pzapata | grep 'Unix username:'
+pdbedit -Lv pzapata | grep 'Password must change'
+echo ""
+pdbedit -Lv rayala | grep 'Unix username:'
+pdbedit -Lv rayala | grep 'Password must change'
+echo ""
+pdbedit -Lv rcastro | grep 'Unix username:'
+pdbedit -Lv rcastro | grep 'Password must change'
+echo ""
+pdbedit -Lv rgarcia | grep 'Unix username:'
+pdbedit -Lv rgarcia | grep 'Password must change'
+echo ""
+pdbedit -Lv rlory | grep 'Unix username:'
+pdbedit -Lv rlory | grep 'Password must change'
+echo ""
+pdbedit -Lv rmarcos | grep 'Unix username:'
+pdbedit -Lv rmarcos | grep 'Password must change'
+echo ""
+pdbedit -Lv rpetrochi | grep 'Unix username:'
+pdbedit -Lv rpetrochi | grep 'Password must change'
+echo ""
+pdbedit -Lv rrojas | grep 'Unix username:'
+pdbedit -Lv rrojas | grep 'Password must change'
+echo ""
+pdbedit -Lv rtorales | grep 'Unix username:'
+pdbedit -Lv rtorales | grep 'Password must change'
+echo ""
+pdbedit -Lv salonso | grep 'Unix username:'
+pdbedit -Lv salonso | grep 'Password must change'
+echo ""
+pdbedit -Lv sdimeo | grep 'Unix username:'
+pdbedit -Lv sdimeo | grep 'Password must change'
+echo ""
+pdbedit -Lv seguridad | grep 'Unix username:'
+pdbedit -Lv seguridad | grep 'Password must change'
+echo ""
+pdbedit -Lv spombo | grep 'Unix username:'
+pdbedit -Lv spombo | grep 'Password must change'
+echo ""
+pdbedit -Lv tarifador | grep 'Unix username:'
+pdbedit -Lv tarifador | grep 'Password must change'
+echo ""
+pdbedit -Lv testing | grep 'Unix username:'
+pdbedit -Lv testing | grep 'Password must change'
+echo ""
+pdbedit -Lv therrera | grep 'Unix username:'
+pdbedit -Lv therrera | grep 'Password must change'
+echo ""
+pdbedit -Lv vdure | grep 'Unix username:'
+pdbedit -Lv vdure | grep 'Password must change'
+echo ""
+pdbedit -Lv vgalvagno | grep 'Unix username:'
+pdbedit -Lv vgalvagno | grep 'Password must change'
+echo ""
+pdbedit -Lv vllamazares | grep 'Unix username:'
+pdbedit -Lv vllamazares | grep 'Password must change'
+echo ""
+pdbedit -Lv vmuzzupappa | grep 'Unix username:'
+pdbedit -Lv vmuzzupappa | grep 'Password must change'
+echo ""
+pdbedit -Lv vpare | grep 'Unix username:'
+pdbedit -Lv vpare | grep 'Password must change'
+echo ""
+pdbedit -Lv yberlato | grep 'Unix username:'
+pdbedit -Lv yberlato | grep 'Password must change'
+echo ""
